@@ -6,7 +6,8 @@ const match = require('../modules/match');
 const dbName = 'majorProjectDb';
 
 //Database connection
-mongoose.connect(`mongodb://localhost/${dbName}`);
+//mongoose.connect(`mongodb://localhost/${dbName}`);
+mongoose.connect('mongodb://Andrew:daniquegray19@ds263089.mlab.com:63089/majorproject');
 let db = mongoose.connection;
 //Check for database connection
 db.once('open', () => console.log(`Connected to ${dbName} Database`));
