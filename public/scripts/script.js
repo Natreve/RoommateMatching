@@ -1,8 +1,17 @@
 $(function () {
     $('.dropdown').dropdown();
-    $('.ui.radio.checkbox').checkbox();
+    $('.ui.checkbox').checkbox();
+    //$('.ui.radio.checkbox').checkbox();
+    $('.inverted.red.button').on('click', function () {
+        var tab = $(this).attr('data-tab');
+        console.log(tab);
+        $('.secondary.menu .item').removeClass('active');
+        $(`.${tab}.item`).addClass('active');
+        $(`.${tab}.item`).removeClass('disabled');
+        
+        $.tab('change tab', $(this).attr('data-tab'));
+    });
     $('.ui.form').form({
-        inline: false,
         fields: {
             name: 'empty',
             dob: 'empty',
@@ -10,7 +19,8 @@ $(function () {
             email: ['email', 'empty'],
             phone: ['maxCount[13]', 'empty'],
             address: 'empty',
-            personality: 'empty'
+            personality: 'empty',
+            terms:'checked'
         },
         onSuccess: (event, fields) => {
             $.ajax({

@@ -50,7 +50,7 @@ form{
 	text-align:center;
 	padding: 3%;
 }
-#bg{
+.ui.segment{
 	padding:0px;
 	border-radius: 0px;
 	border-style: none;
@@ -62,9 +62,6 @@ form{
 	border-bottom-color: red;
 	border-bottom-width: 4px;
 	font-size: 1.15em;
-}
-.ui.secondary.pointing.menu{
-	
 }
 
 .ui.secondary.pointing.menu .item:hover{

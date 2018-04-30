@@ -1,125 +1,343 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Register</title>
 	<meta charset="utf-8" />
-		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.css">
-		<link rel="stylesheet" href="stylesheet.css">
-		<script type="text/javascript">
-		</script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.1/dist/semantic.min.css">
+	<link rel="stylesheet" href="/styles/stylesheet.css">
+	<link rel="stylesheet" href="/styles/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
+
 <body id="register">
-	<div class="ui segment" id="headr"> 
-		<img class="ui fluid image" src="roomatehead.jpg">
+	<div class="ui segment" id="headr">
+		<img class="ui fluid image" src="/imgs/roomatehead.jpg">
 	</div>
-
-	<div class="ui secondary pointing menu" id="menu">
-  <a class="active item" href="register.html">
-    Personal Details
-  </a>
-<a class="item" href="characteristics.html"> Characteristics </a>
-  <a href="preferences.html" class="item">
-    Preferences 
-  </a>
-  <a  href="terms.html" class="item">
-    Terms & Agreements
-  </a>
-  <div class="right menu">
-    <a href="home.html" class="ui item">
-      Home
-    </a>
-  </div>
-</div>
+	<div class="ui pointing secondary menu">
+		<a class="active personal item" data-tab="personal">Personal Details</a>
+		<a class="characteristics item disabled" data-tab="characteristics">Characteristics</a>
+		<a class="terms item disabled" data-tab="terms">Terms & Agreements</a>
+		<a class="complete item disabled" data-tab="complete">Complete</a>
+	</div>
 	<form class="ui form">
-	  	<h5 class="ui dividing header">Personal Details</h5>
+		<div class="ui active tab" data-tab="personal">
+			<div class="field">
+				<div class="three fields">
+					<div class="five wide field">
+						<label>Name</label>
+						<input type="text" name="name" placeholder="eg. Andrew Gray">
+					</div>
+					<div class="four wide field">
+						<label>Date of birth</label>
+						<input type="date" name="dob" placeholder="date">
+					</div>
+					<div class="four wide field">
+						<label>Sex</label>
+						<div class="ui selection dropdown">
+							<input type="hidden" name="sex">
+							<div class="default text">Sex</div>
+							<i class="dropdown icon"></i>
+							<div class="menu">
+								<div class="item" data-value="male">
+									<i class="mars icon"></i> Male</div>
+								<div class="item" data-value="female">
+									<i class="venus icon"></i>Female</div>
+							</div>
+						</div>
+					</div>
+				</div>
 
-	  	<div class="field">
-	    	<label>Name</label>
-			<div class="field">
-		        <input type="text" name="name" placeholder="Full Name">
-		    </div>
-	  	</div>
-		<div class="two fields">
-		<div class="field">
-		    <label>Email</label>
-	      	<div class="field">
-		        <input type="email" name="email" placeholder="Email">
-		    </div>   
-	  	</div>
-	  	<div class="field">
-		    <label>Telephone Number</label>
-			<div class="field">
-		        <input type="tel" name="tel" placeholder="Telephone">
-		    </div>   	
+				<div class="two fields">
+					<div class="five wide field">
+						<label>Email</label>
+						<input type="text" name="email" placeholder="eg. gray.andrew@utech.edu.jm">
+					</div>
+					<div class="four wide field">
+						<label>Phone #</label>
+						<input type="text" name="phone" placeholder="eg. 876-123-4567">
+					</div>
+				</div>
+				<div class="thirteen wide field">
+					<label>Address</label>
+					<input type="text" name="address" placeholder="eg. Lot 32B manatee close, manley meadows, kingston 2">
+				</div>
+				<div class="four wide field">
+					<label>Personality</label>
+					<div class="ui selection dropdown">
+						<input type="hidden" name="personality">
+						<div class="default text">Personality</div>
+						<i class="dropdown icon"></i>
+						<div class="menu">
+							<div class="item" data-value="Architect">Architect</div>
+							<div class="item" data-value="Logician">Logician</div>
+							<div class="item" data-value="Commander">Commander</div>
+							<div class="item" data-value="Debater">Debater</div>
+							<div class="item" data-value="Advocate">Advocate</div>
+							<div class="item" data-value="Mediator">Mediator</div>
+							<div class="item" data-value="Protagonist">Protagonist</div>
+							<div class="item" data-value="Campaigner">Campaigner</div>
+							<div class="item" data-value="Logistician">Logistician</div>
+							<div class="item" data-value="Defender">Defender</div>
+							<div class="item" data-value="Executive">Executive</div>
+							<div class="item" data-value="Consul">Consul</div>
+							<div class="item" data-value="Virtuoso">Virtuoso</div>
+							<div class="item" data-value="Adventurer">Adventurer</div>
+							<div class="item" data-value="Entrepeneur">Entrepeneur</div>
+							<div class="item" data-value="Entertainer">Entertainer</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ui divider"></div>
+			<div class="ui inverted red next button" data-tab="characteristics">NEXT</div>
 		</div>
-	</div>
-
-		<div class="two fields">	
-	  	<div class="field">
-		    <label>Gender</label>
-		    <div class="field">
-		        <select class="ui fluid search dropdown" name="gender">
-		            <option value="">Gender</option>
-		            <option value="1">Male</option>
-		            <option value="2">Female</option>
-		        </select>
-		    </div>   
-		</div>
-
-		<div class="field">
-		    <label>DOB</label>
+		<div class="ui tab" data-tab="characteristics">
 			<div class="field">
-		        <input type="date" name="dob" placeholder="DOB">
-		    </div>   	
+				<div class="grouped fields">
+					<label for="bedtime">1. Normal sleep cycle</label>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="bedtime" tabindex="0" class="hidden" type="radio" value="1">
+							<label>10 PM or earlier</label>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="bedtime" tabindex="0" class="hidden" type="radio" value="2">
+							<label>between 10 PM and midnight</label>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="bedtime" tabindex="0" class="hidden" type="radio" value="3">
+							<label>Around midnight</label>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="bedtime" tabindex="0" class="hidden" type="radio" value="4">
+							<label>2 AM or later</label>
+						</div>
+					</div>
+				</div>
+				<div class="grouped fields">
+					<label for="allnighter">2. Work pressure sleep cycle</label>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="allnighter" tabindex="0" class="hidden" type="radio" value="1">
+							<label>Several nights per week</label>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="allnighter" tabindex="0" class="hidden" type="radio" value="2">
+							<label>Once a week</label>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="allnighter" tabindex="0" class="hidden" type="radio" value="3">
+							<label>Once a month</label>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="allnighter" tabindex="0" class="hidden" type="radio" value="4">
+							<label>Almost never</label>
+						</div>
+					</div>
+				</div>
+				<div class="grouped fields">
+					<label for="workspace">3. Prefered work space</label>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="workspace" tabindex="0" class="hidden" type="radio" value="1">
+							<label>At their desk</label>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="workspace" tabindex="0" class="hidden" type="radio" value="2">
+							<label>In the library</label>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="workspace" tabindex="0" class="hidden" type="radio" value="3">
+							<label>In a study lounge or similar space</label>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="workspace" tabindex="0" class="hidden" type="radio" value="4">
+							<label>I don’t really do work</label>
+						</div>
+					</div>
+				</div>
+				<div class="grouped fields">
+					<label for="smoker">4. Smokes?</label>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="smoker" tabindex="0" class="hidden" type="radio" value="1">
+							<label>Yes</label>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="smoker" tabindex="0" class="hidden" type="radio" value="2">
+							<label>No</label>
+						</div>
+					</div>
+				</div>
+				<div class="grouped fields">
+					<label for="drinker">5. Drinks?</label>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="drinker" tabindex="0" class="hidden" type="radio" value="1">
+							<label>Yes</label>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="drinker" tabindex="0" class="hidden" type="radio" value="2">
+							<label>No</label>
+						</div>
+					</div>
+				</div>
+				<div class="grouped fields">
+					<label for="social">6. Social</label>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="social" tabindex="0" class="hidden" type="radio" value="1">
+							<label>like to have people over</label>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="social" tabindex="0" class="hidden" type="radio" value="2">
+							<label>like to go over out</label>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="social" tabindex="0" class="hidden" type="radio" value="3">
+							<label>50/50</label>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="social" tabindex="0" class="hidden" type="radio" value="4">
+							<label>Don't socialise</label>
+						</div>
+					</div>
+				</div>
+				<div class="grouped fields">
+					<label for="househabits">7. House habits</label>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="househabits" tabindex="0" class="hidden" type="radio" value="1">
+							<label>OCD</label>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="househabits" tabindex="0" class="hidden" type="radio" value="2">
+							<label>Clean</label>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="househabits" tabindex="0" class="hidden" type="radio" value="3">
+							<label>Slightly disorganized</label>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="househabits" tabindex="0" class="hidden" type="radio" value="4">
+							<label>Messy</label>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="househabits" tabindex="0" class="hidden" type="radio" value="5">
+							<label>Extremely messy</label>
+						</div>
+					</div>
+				</div>
+				<div class="grouped fields">
+					<label for="roommate">8. Prefered Roomate</label>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="roommate" tabindex="0" class="hidden" type="radio" value="1">
+							<label>Long term friendship</label>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="roommate" tabindex="0" class="hidden" type="radio" value="2">
+							<label>Aquantancies</label>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="roommate" tabindex="0" class="hidden" type="radio" value="3">
+							<label>Not interested in friendship</label>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="roommate" tabindex="0" class="hidden" type="radio" value="4">
+							<label>Don't need to interact</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ui divider"></div>
+
+			<div class="ui buttons">
+				<div class="ui inverted red back button" data-tab="personal">Back</div>
+				<div class="ui inverted red next button" data-tab="terms">NEXT</div>
+			</div>
 		</div>
-	</div>
-
-		<div class="field">
-	    	<label>Address</label>
+		<div class="ui tab" data-tab="terms">
+			<div class="ui message">
+				<div class="header">
+					Roommate Sync asks for
+				</div>
+				<ul class="list">
+					<li>
+						<strong>Contact Information</strong> so we can allow your matches or external placement agencies to contact you.</li>
+					<li>
+						<strong>Personal Details</strong>, which are kept secured and will only be used to generate best matches.</li>
+					<li>
+						<strong>Honesty</strong>, the accuracy of your Information is important. Please try your best to select options that best match
+						your view</li>
+				</ul>
+			</div>
 			<div class="field">
-		        <input type="text" name="address" placeholder="Adress">
-		    </div>
-	  	</div>
+				<div class="ui checkbox">
+					<input tabindex="0" class="hidden" name="terms" type="checkbox" value="agree">
+					<label>I agree to the Terms and Conditions</label>
+				</div>
+			</div>
+			<div class="ui divider"></div>
 
-		<div class="field">
-			<div></div>
-		    <label>Personality Type</label>
-		    <div class=" two fields">
-		    	<div class="field">
-		        <select class="ui fluid search dropdown" name="Personality">
-		            <option value="">Personality type</option>
-		            <option value="1">ISTJ</option>
-		            <option value="2">ISTP</option>
-		            <option value="3">ESTP</option>
-		            <option value="4">ESTJ</option>
-		            <option value="5">ISFJ</option>
-		            <option value="6">ISFP</option>
-		            <option value="7">ESFP</option>
-		            <option value="8">ESFJ</option>
-		            <option value="9">Advocate (INFJ)</option>
-		            <option value="10">Mediator (INFP)</option>
-		            <option value="11">Campaigner (ENFP)</option>
-		            <option value="12">Protagonist (ENFJ)</option>
-		            <option value="13">Architect (INTJ)</option>
-		            <option value="14">Logician (INTP)</option>
-		            <option value="15">Debater (ENTP)</option>
-		            <option value="16"> Commander (ENTJ)</option>
-		        </select>
-		        </div>
-		        <div class="field">
-		        	<a href="https://www.16personalities.com/free-personality-test">
-		    		<div class="ui button"  data-content="You will be redirected" tabindex="0">TAKE PERSONALITY TEST</div> </a>
-			    </div> 		    
-		    </div>
-		</div><br>
-	  	<a href="characteristics.html">
-			<div class="ui red button" >NEXT</div>
-		</a>	
+			<div class="ui buttons">
+				<div class="ui inverted red back button" data-tab="characteristics">Back</div>
+				<div class="ui positive submit button">Complete</div>
+			</div>
+			<div class="ui error message"></div>
+		</div>
+		<div class="ui tab" data-tab="complete">
+			<div class="ui divider"></div>
+		</div>
 	</form>
-
-	<footer>Copyright &copy 2018. All Rights Reserved</footer>
-
+	<h5 class="ui dividing header"></h5>
+	<footer>School of Computing and Information Technology Major Project 2018. Roommate Matching.</footer>
 </body>
-</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.1/dist/semantic.min.js"></script>
+<script src="/scripts/script.js"></script>
 
+</html>
