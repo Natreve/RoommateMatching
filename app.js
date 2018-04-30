@@ -49,7 +49,7 @@ app.get('/terms', (req, res) => {
     res.sendFile(__dirname + '/views/terms.html');
 });
 
-//Terms Page
+//Complete Page
 app.get('/complete', (req, res) => {
     res.sendFile(__dirname + '/views/complete.html');
 });
