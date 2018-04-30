@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+	<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.css">
+		<link rel="stylesheet" href="stylesheet.css">
+		<script type="text/javascript">
+		</script>
+</head>
+<body id="register">
+	<div class="ui segment" id="headr"> 
+		<img class="ui fluid image" src="roomatehead.jpg">
+	</div>
+
+	<div class="ui secondary pointing menu" id="menu">
+  <a class="active item" href="register.html">
+    Personal Details
+  </a>
+<a class="item" href="characteristics.html"> Characteristics </a>
+  <a href="preferences.html" class="item">
+    Preferences 
+  </a>
+  <a  href="terms.html" class="item">
+    Terms & Agreements
+  </a>
+  <div class="right menu">
+    <a href="home.html" class="ui item">
+      Home
+    </a>
+  </div>
+</div>
+	<form class="ui form">
+	  	<h5 class="ui dividing header">Personal Details</h5>
+
+	  	<div class="field">
+	    	<label>Name</label>
+			<div class="field">
+		        <input type="text" name="name" placeholder="Full Name">
+		    </div>
+	  	</div>
+		<div class="two fields">
+		<div class="field">
+		    <label>Email</label>
+	      	<div class="field">
+		        <input type="email" name="email" placeholder="Email">
+		    </div>   
+	  	</div>
+	  	<div class="field">
+		    <label>Telephone Number</label>
+			<div class="field">
+		        <input type="tel" name="tel" placeholder="Telephone">
+		    </div>   	
+		</div>
+	</div>
+
+		<div class="two fields">	
+	  	<div class="field">
+		    <label>Gender</label>
+		    <div class="field">
+		        <select class="ui fluid search dropdown" name="gender">
+		            <option value="">Gender</option>
+		            <option value="1">Male</option>
+		            <option value="2">Female</option>
+		        </select>
+		    </div>   
+		</div>
+
+		<div class="field">
+		    <label>DOB</label>
+			<div class="field">
+		        <input type="date" name="dob" placeholder="DOB">
+		    </div>   	
+		</div>
+	</div>
+
+		<div class="field">
+	    	<label>Address</label>
+			<div class="field">
+		        <input type="text" name="address" placeholder="Adress">
+		    </div>
+	  	</div>
+
+		<div class="field">
+			<div></div>
+		    <label>Personality Type</label>
+		    <div class=" two fields">
+		    	<div class="field">
+		        <select class="ui fluid search dropdown" name="Personality">
+		            <option value="">Personality type</option>
+		            <option value="1">ISTJ</option>
+		            <option value="2">ISTP</option>
+		            <option value="3">ESTP</option>
+		            <option value="4">ESTJ</option>
+		            <option value="5">ISFJ</option>
+		            <option value="6">ISFP</option>
+		            <option value="7">ESFP</option>
+		            <option value="8">ESFJ</option>
+		            <option value="9">Advocate (INFJ)</option>
+		            <option value="10">Mediator (INFP)</option>
+		            <option value="11">Campaigner (ENFP)</option>
+		            <option value="12">Protagonist (ENFJ)</option>
+		            <option value="13">Architect (INTJ)</option>
+		            <option value="14">Logician (INTP)</option>
+		            <option value="15">Debater (ENTP)</option>
+		            <option value="16"> Commander (ENTJ)</option>
+		        </select>
+		        </div>
+		        <div class="field">
+		        	<a href="https://www.16personalities.com/free-personality-test">
+		    		<div class="ui button"  data-content="You will be redirected" tabindex="0">TAKE PERSONALITY TEST</div> </a>
+			    </div> 		    
+		    </div>
+		</div><br>
+	  	<a href="preferences.html">
+			<div class="ui red button" >NEXT</div>
+		</a>	
+	</form>
+
+	<footer>Copyright &copy 2018. All Rights Reserved</footer>
+
+</body>
+</html>
+
