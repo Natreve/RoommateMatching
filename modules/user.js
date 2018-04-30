@@ -10,10 +10,10 @@ let userSchema = mongoose.Schema({
     },
     address: { type:String, required:true},
     personality: { type:String, required:true},
-    characteristics:{
+    char:{
         
     },
-    preferences: {
+    pref: {
         bedTime: Number,
         allnighter: Number,
         workspace: Number,

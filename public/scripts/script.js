@@ -15,7 +15,7 @@ $(function () {
         onSuccess: (event, fields) => {
             $.ajax({
                 type: 'POST',
-                url: '/users/add?' + $("form").serialize(),
+                url: '/users?' + $("form").serialize(),
                 data: $("form").serialize(),
                 success: function (response) {
                     console.log("successful submission");

@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-//const fs = require('fs');
 const mongoose = require('mongoose');
 const User = require('../modules/user');
 const match = require('../modules/match');
@@ -50,7 +49,7 @@ router.get('/users/delete/:id', (req, res) => { //API - Delete user based on ID
     })
 })
 
-router.post('/users/add', (req, res) => {
+router.post('/users', (req, res) => {
     let user = new User();
     for (value in req.query) {
         if (value === "phone") user.contact.phone = req.query.phone;

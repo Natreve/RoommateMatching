@@ -1,6 +1,3 @@
-/**
- * 
- */
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 8000;
@@ -20,4 +17,5 @@ app.get('/characteristics', (req, res) => res.sendFile(__dirname + '/views/chara
 
 //API Routes
 app.use('/api', require('./routes/api'));//API ROUTES
+//
 app.listen(port, () => console.log(`Listening on port ${port}...`));
