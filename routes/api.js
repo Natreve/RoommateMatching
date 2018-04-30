@@ -21,7 +21,7 @@ router.get('/users/:id', (req, res) => User.findById(req.params.id, (err, user) 
     if (err) res.status(400).send("Invalid user ID")
     else res.send(user)
 }));
-/*router.get('/users/filterBySex/:sex', (req, res) => User.find({ sex: req.params.sex }, (err, user) => { // API - Return users based on sex
+router.get('/users/filterBySex/:sex', (req, res) => User.find({ sex: req.params.sex }, (err, user) => { // API - Return users based on sex
     if (err) res.status(400).send("Invalid sex")
     else res.send(user)
 }));
@@ -67,6 +67,6 @@ router.post('/users/add', (req, res) => {
 });
 router.post('/users/update/:id', (req, res) => User.findById(req.params.id, (err, user) => {
     //let user = new User();
-}));*/
+}));
 
 module.exports = router;
