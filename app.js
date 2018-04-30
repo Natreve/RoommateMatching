@@ -21,8 +21,37 @@ app.use(express.json());
 app.use(express.static('public'));
 
 //Routes
+//default
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/views/home.html');
+});
+
+//Home Page
+app.get('/home', (req, res) => {
+    res.sendFile(__dirname + '/views/home.html');
+});
+
+//Register Page
+app.get('/register', (req, res) => {
+    res.sendFile(__dirname + '/views/register.html');
+});
+//Characteristics Page
+app.get('/characteristics', (req, res) => {
+    res.sendFile(__dirname + '/views/characteristics.html');
+});
+//Preferences Page
+app.get('/preferences', (req, res) => {
+    res.sendFile(__dirname + '/views/preferences.html');
+});
+
+//Terms Page
+app.get('/terms', (req, res) => {
+    res.sendFile(__dirname + '/views/terms.html');
+});
+
+//Terms Page
+app.get('/complete', (req, res) => {
+    res.sendFile(__dirname + '/views/complete.html');
 });
 
 /*

@@ -1,248 +1,254 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Preferences</title>
+	<title>Register</title>
 	<meta charset="utf-8" />
-		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.css">
-		<link rel="stylesheet" href="stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.css">
+	<link rel="stylesheet" href="/styles/stylesheet.css">
+	<script src="/scripts/script.js"></script>
 </head>
+
 <body>
-	<div class="ui segment" id="headr"> 
-		<img class="ui fluid image" src="roomatehead.jpg">
+	<div class="ui segment" id="headr">
+		<img class="ui fluid image" src="/imgs/roomatehead.jpg">
 	</div>
 
 	<div class="ui secondary pointing menu">
-		<a class="item" href="register.html"> Personal Details </a>
-		<a class="active item" href="characteristics.html"> Characteristics </a>
-	  	<a href="preferences.html" class="item"> Preferences </a>
-	  	<a href="terms.html" class="item"> Terms & Agreements </a>
-  	<div class="right menu">
-	    <a href="home.html" class="ui item"> Home </a>
- 	</div>
- </div>
+		<a class="item" href="/register"> Personal Details </a>
+		<a class="active item" href="/characteristics"> Characteristics </a>
+		<a href="/preferences" class="item"> Preferences </a>
+		<a href="/terms" class="item"> Terms & Agreements </a>
+		<a href="/" class="disabled item"> Complete </a>
+		<div class="right menu">
+			<a href="/home" class="ui item"> Home </a>
+		</div>
+	</div>
 
- 	<form class="ui form">
- 		<h5 class="ui dividing header">Characteristics</h5>
+	<form class="ui form">
+		<h5 class="ui dividing header">Characteristics</h5>
 
 		<div class="grouped fields">
 
-	    	<label>1. Normal Sleep Cycle</label>
+			<label>1. Normal Sleep Cycle</label>
 			<div class="field">
 				<div class="ui radio checkbox">
-			        <input type="radio" name="q1">
-			        <label>10 PM or earlier</label>
-			    </div>
-		    </div>
-		    <div class="field">
-				<div class="ui radio checkbox">
-			        <input type="radio" name="q1">
-			        <label>Between 10 PM and midnight</label>
-			    </div>
-		    </div>
-		    <div class="field">
-				<div class="ui radio checkbox">
-			        <input type="radio" name="q1">
-			        <label>Around midnight</label>
-			    </div>
-		    </div>
-		    <div class="field">
-				<div class="ui radio checkbox">
-			        <input type="radio" name="q1">
-			        <label>2 AM or later</label>
-			    </div>
-		    </div>
-
-	  	</div>
-
-	  	<div class="grouped fields">
-	    	<label>2. Work Pressure Sleep Cycle</label>
+					<input type="radio" name="q1">
+					<label>10 PM or earlier</label>
+				</div>
+			</div>
 			<div class="field">
 				<div class="ui radio checkbox">
-			        <input type="radio" name="q2">
-			        <label>Several nights per week</label>
-			    </div>
-		    </div>
-		    <div class="field">
-				<div class="ui radio checkbox">
-			        <input type="radio" name="q2">
-			        <label>Once per week</label>
-			    </div>
-		    </div>
-		    <div class="field">
-				<div class="ui radio checkbox">
-			        <input type="radio" name="q2">
-			        <label>Once per month</label>
-			    </div>
-		    </div>
-		    <div class="field">
-				<div class="ui radio checkbox">
-			        <input type="radio" name="q2">
-			        <label>Almost never</label>
-			    </div>
-		    </div>
-	  	</div>
-
-	  	<div class="grouped fields">
-	    	<label>3. Prefered Work Space</label>
+					<input type="radio" name="q1">
+					<label>Between 10 PM and midnight</label>
+				</div>
+			</div>
 			<div class="field">
 				<div class="ui radio checkbox">
-			        <input type="radio" name="q3">
-			        <label>At my desk</label>
-			    </div>
-		    </div>
-		    <div class="field">
-				<div class="ui radio checkbox">
-			        <input type="radio" name="q3">
-			        <label>in the library</label>
-			    </div>
-		    </div>
-		    <div class="field">
-				<div class="ui radio checkbox">
-			        <input type="radio" name="q3">
-			        <label>In a study lounge or similar space</label>
-			    </div>
-		    </div>
-		    <div class="field">
-				<div class="ui radio checkbox">
-			        <input type="radio" name="q3">
-			        <label>I don't really do work</label>
-			    </div>
-		    </div>
-	  	</div>
-
-	  	<div class="grouped fields">
-	    	<label>4. Smokes</label>
+					<input type="radio" name="q1">
+					<label>Around midnight</label>
+				</div>
+			</div>
 			<div class="field">
 				<div class="ui radio checkbox">
-			        <input type="radio" name="q4">
-			        <label>Yes</label>
-			    </div>
-		    </div>
-		    <div class="field">
-				<div class="ui radio checkbox">
-			        <input type="radio" name="q4">
-			        <label>No</label>
-			    </div>
-		    </div>
-	  	</div>
+					<input type="radio" name="q1">
+					<label>2 AM or later</label>
+				</div>
+			</div>
 
-	  	<div class="grouped fields">
-	    	<label>5. Drinks</label>
+		</div>
+
+		<div class="grouped fields">
+			<label>2. Work Pressure Sleep Cycle</label>
 			<div class="field">
 				<div class="ui radio checkbox">
-			        <input type="radio" name="q5">
-			        <label>Yes</label>
-			    </div>
-		    </div>
-		    <div class="field">
-				<div class="ui radio checkbox">
-			        <input type="radio" name="q5">
-			        <label>No</label>
-			    </div>
-		    </div>
-	  	</div>
-
-	  	<div class="grouped fields">
-	    	<label>6. Social</label>
+					<input type="radio" name="q2">
+					<label>Several nights per week</label>
+				</div>
+			</div>
 			<div class="field">
 				<div class="ui radio checkbox">
-			        <input type="radio" name="q6">
-			        <label>Like to have people over</label>
-			    </div>
-		    </div>
-		    <div class="field">
-				<div class="ui radio checkbox">
-			        <input type="radio" name="q6">
-			        <label>Like to go out</label>
-			    </div>
-		    </div>
-		    <div class="field">
-				<div class="ui radio checkbox">
-			        <input type="radio" name="q6">
-			        <label>50/50</label>
-			    </div>
-		    </div>
-		    <div class="field">
-				<div class="ui radio checkbox">
-			        <input type="radio" name="q6">
-			        <label>I don't socialize</label>
-			    </div>
-		    </div>
-	  	</div>
-
-	  	<div class="grouped fields">
-	    	<label>7. House habits</label>
+					<input type="radio" name="q2">
+					<label>Once per week</label>
+				</div>
+			</div>
 			<div class="field">
 				<div class="ui radio checkbox">
-			        <input type="radio" name="q7">
-			        <label>OCD</label>
-			    </div>
-		    </div>
-		    <div class="field">
-				<div class="ui radio checkbox">
-			        <input type="radio" name="q7">
-			        <label>Clean</label>
-			    </div>
-		    </div>
-		    <div class="field">
-				<div class="ui radio checkbox">
-			        <input type="radio" name="q7">
-			        <label>Slighty disorganized</label>
-			    </div>
-		    </div>
-		    <div class="field">
-				<div class="ui radio checkbox">
-			        <input type="radio" name="q7">
-			        <label>Messy</label>
-			    </div>
-		    </div>
-		    <div class="field">
-				<div class="ui radio checkbox">
-			        <input type="radio" name="q7">
-			        <label>Extremely messy</label>
-			    </div>
-		    </div>
-	  	</div>
-
-	  	<div class="grouped fields">
-	    	<label>8. Prefered Roomate</label>
+					<input type="radio" name="q2">
+					<label>Once per month</label>
+				</div>
+			</div>
 			<div class="field">
 				<div class="ui radio checkbox">
-			        <input type="radio" name="q8">
-			        <label>Long term friendship</label>
-			    </div>
-		    </div>
-		    <div class="field">
+					<input type="radio" name="q2">
+					<label>Almost never</label>
+				</div>
+			</div>
+		</div>
+
+		<div class="grouped fields">
+			<label>3. Prefered Work Space</label>
+			<div class="field">
 				<div class="ui radio checkbox">
-			        <input type="radio" name="q8">
-			        <label>Aquantancies</label>
-			    </div>
-		    </div>
-		    <div class="field">
+					<input type="radio" name="q3">
+					<label>At my desk</label>
+				</div>
+			</div>
+			<div class="field">
 				<div class="ui radio checkbox">
-			        <input type="radio" name="q8">
-			        <label>Not interested in friendship</label>
-			    </div>
-		    </div>
-		    <div class="field">
+					<input type="radio" name="q3">
+					<label>in the library</label>
+				</div>
+			</div>
+			<div class="field">
 				<div class="ui radio checkbox">
-			        <input type="radio" name="q8">
-			        <label>Don't need to interact</label>
-			    </div>
-		    </div>
-	  	</div><br>
+					<input type="radio" name="q3">
+					<label>In a study lounge or similar space</label>
+				</div>
+			</div>
+			<div class="field">
+				<div class="ui radio checkbox">
+					<input type="radio" name="q3">
+					<label>I don't really do work</label>
+				</div>
+			</div>
+		</div>
+
+		<div class="grouped fields">
+			<label>4. Smokes</label>
+			<div class="field">
+				<div class="ui radio checkbox">
+					<input type="radio" name="q4">
+					<label>Yes</label>
+				</div>
+			</div>
+			<div class="field">
+				<div class="ui radio checkbox">
+					<input type="radio" name="q4">
+					<label>No</label>
+				</div>
+			</div>
+		</div>
+
+		<div class="grouped fields">
+			<label>5. Drinks</label>
+			<div class="field">
+				<div class="ui radio checkbox">
+					<input type="radio" name="q5">
+					<label>Yes</label>
+				</div>
+			</div>
+			<div class="field">
+				<div class="ui radio checkbox">
+					<input type="radio" name="q5">
+					<label>No</label>
+				</div>
+			</div>
+		</div>
+
+		<div class="grouped fields">
+			<label>6. Social</label>
+			<div class="field">
+				<div class="ui radio checkbox">
+					<input type="radio" name="q6">
+					<label>Like to have people over</label>
+				</div>
+			</div>
+			<div class="field">
+				<div class="ui radio checkbox">
+					<input type="radio" name="q6">
+					<label>Like to go out</label>
+				</div>
+			</div>
+			<div class="field">
+				<div class="ui radio checkbox">
+					<input type="radio" name="q6">
+					<label>50/50</label>
+				</div>
+			</div>
+			<div class="field">
+				<div class="ui radio checkbox">
+					<input type="radio" name="q6">
+					<label>I don't socialize</label>
+				</div>
+			</div>
+		</div>
+
+		<div class="grouped fields">
+			<label>7. House habits</label>
+			<div class="field">
+				<div class="ui radio checkbox">
+					<input type="radio" name="q7">
+					<label>OCD</label>
+				</div>
+			</div>
+			<div class="field">
+				<div class="ui radio checkbox">
+					<input type="radio" name="q7">
+					<label>Clean</label>
+				</div>
+			</div>
+			<div class="field">
+				<div class="ui radio checkbox">
+					<input type="radio" name="q7">
+					<label>Slighty disorganized</label>
+				</div>
+			</div>
+			<div class="field">
+				<div class="ui radio checkbox">
+					<input type="radio" name="q7">
+					<label>Messy</label>
+				</div>
+			</div>
+			<div class="field">
+				<div class="ui radio checkbox">
+					<input type="radio" name="q7">
+					<label>Extremely messy</label>
+				</div>
+			</div>
+		</div>
+
+		<div class="grouped fields">
+			<label>8. Prefered Roomate</label>
+			<div class="field">
+				<div class="ui radio checkbox">
+					<input type="radio" name="q8">
+					<label>Long term friendship</label>
+				</div>
+			</div>
+			<div class="field">
+				<div class="ui radio checkbox">
+					<input type="radio" name="q8">
+					<label>Aquantancies</label>
+				</div>
+			</div>
+			<div class="field">
+				<div class="ui radio checkbox">
+					<input type="radio" name="q8">
+					<label>Not interested in friendship</label>
+				</div>
+			</div>
+			<div class="field">
+				<div class="ui radio checkbox">
+					<input type="radio" name="q8">
+					<label>Don't need to interact</label>
+				</div>
+			</div>
+		</div>
+		<br>
 
 
-		<a href="register.html">
-			<div class="ui button" >PREVIOUS</div>
+		<a href="/register">
+			<div class="ui button">PREVIOUS</div>
 		</a>
- 		<a href="preferences.html">
-			<div class="ui red button" >NEXT</div>
+		<a href="/preferences">
+			<div class="ui red button">NEXT</div>
 		</a>
- 	</form>
+	</form>
 
 	<footer>Copyright &copy 2018. All Rights Reserved</footer>
 
 </body>
+
 </html>
