@@ -42,4 +42,30 @@ $(function () {
             return false;
         }
     })
+    $('.ui.login.form').form({
+        fields: {
+            email: 'email',
+            password: 'empty'
+        },
+        onSuccess: function(event, fields) {
+            console.log("successful submission");
+            /*$.ajax({
+                type: 'POST',
+                url: 'login?' + $("form").serialize(),
+                data: $("form").serialize(),
+                success: function (response) {
+                    console.log("successful submission");
+                    return false;
+                },
+                failure: function (errMsg) {
+                    console.log(errMsg);
+                }
+            });*/
+            return true;
+        },
+        onFailure: function(event, fields){
+            console.log("unsuccessful submission")
+            return false;
+        }
+    })
 });

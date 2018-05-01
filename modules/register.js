@@ -5,11 +5,9 @@ const mongoose = require('mongoose');
 const User = require('../modules/user');
 const match = require('../modules/match');
 const dbName = 'majorProjectDb';
-const session = require('express-session');
 const path = require('path');
 const rootFolder = require('../rootFolder');
 
-app.use(session({ secret: 'u4885u3b32-12m3', resave: false, saveUninitialized: true }));
 //Database connection
 //mongoose.connect(`mongodb://localhost/${dbName}`);
 mongoose.connect('mongodb://adminAndrew:password@ds263089.mlab.com:63089/majorproject');
@@ -19,7 +17,9 @@ db.once('open', () => console.log(`Connected to ${dbName} Database`));
 //Check for database errors
 db.on('error', (err) => console.log(err));
 
-router.get('/register', (req, res) => res.sendFile(rootFolder.rootFolder + '/views/register.html'));
+router.get('/register', (req, res) => {
+    if(req.session.user) res.sendFile(rootFolder.rootFolder + '/views/profile.html');
+    else res.sendFile(rootFolder.rootFolder + '/views/register.html')});
 router.post('/register', (req, res) => {
     var email = req.query.email,
         password = req.query.password;
