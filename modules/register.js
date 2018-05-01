@@ -18,16 +18,8 @@ db.once('open', () => console.log(`Connected to ${dbName} Database`));
 db.on('error', (err) => console.log(err));
 
 router.get('/register', (req, res) => {
-    if(req.session.user) res.sendFile(rootFolder.rootFolder + '/views/profile.html');
-    else res.sendFile(rootFolder.rootFolder + '/views/register.html')});
-router.post('/register', (req, res) => {
-    var email = req.query.email,
-        password = req.query.password;
-    User.findOne({ email: email, password: password }, (err, user) => {
-        if (err) res.status(500).send("Server error");
-        else if (!user) res.status(404).send("User doesn't excisit");
-        else res.status(200).sendFile(rootFolder.rootFolder + '/views/profile.html');
-    })
+    if (req.session.user) res.sendFile(rootFolder.rootFolder + '/views/profile.html');
+    else res.sendFile(rootFolder.rootFolder + '/views/register.html')
 });
 
 router.post('/register', (req, res) => {
