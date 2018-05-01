@@ -23,7 +23,6 @@ $(function () {
             terms:'checked'
         },
         onSuccess: (event, fields) => {
-            console.log("successful submission");
             $.ajax({
                 type: 'POST',
                 url: 'register?' + $("form").serialize(),

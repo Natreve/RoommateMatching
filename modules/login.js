@@ -32,15 +32,13 @@ router.get('/login', (req, res) => {
     else res.sendFile(rootFolder.rootFolder + '/views/login.html')
 });
 router.post('/login', (req, res) => {
-    databaseConnection();
-    
-    User.find({ "contact.email": req.query.email, password: req.query.password }, (err, user) => { // API - Return users based on sex
-        if (err) return res.status(500).send("Server error");
-        else if (!user) return res.status(404).send("User doesn't excisit");
-        req.session.user = user;
-        res.redirect('/profile');
-    });
-    
+    var email = req.query.email,
+        password = req.query.password;
+    User.findOne({ email: email, password: password }, (err, user) => {
+        if (err) res.status(500).send("Server error");
+        else if (!user) res.status(404).send("User doesn't excisit");
+        else res.status(200).send("All is well");
+    })
 });
 
 router.get('/profile', (req, res) => {

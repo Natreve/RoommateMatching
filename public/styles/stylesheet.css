@@ -73,7 +73,15 @@ footer{
 	border-style: none;
 	border-radius: 5px;
 	margin: 4%;
-	margin-left: 35%;
+	margin-left: 13%;
+	padding:2%;
+	font-size: 1em;
+}
+#loginBtn{
+	width: 30%;
+	border-style: none;
+	border-radius: 5px;
+	margin: 4%;
 	padding:2%;
 	font-size: 1em;
 }
@@ -473,7 +481,15 @@ form{
 	border-style: none;
 	border-radius: 5px;
 	margin: 4%;
-	margin-left: 36%;
+	margin-left: 25%;
+	padding:12px;
+	font-size: 1.4em;
+}
+#loginBtn{
+	width: 21%;
+	border-style: none;
+	border-radius: 5px;
+	margin: 4%;
 	padding:12px;
 	font-size: 1.4em;
 }
@@ -497,7 +513,7 @@ footer{
 }
 
 
-@media only screen and (max-width: 1440px) {
+@media only screen and (min-width: 1440px) {
 	h1{
 	font-size: 6.4em;
 	font-weight: bolder;
@@ -574,7 +590,16 @@ form{
 	border-style: none;
 	border-radius: 5px;
 	margin: 5%;
-	margin-left: 41%;
+	margin-left: 35%;
+	padding:12px;
+	font-size: 1.6em;
+}
+
+#loginBtn{
+	width: 18%;
+	border-style: none;
+	border-radius: 5px;
+	margin: 5%;
 	padding:12px;
 	font-size: 1.6em;
 }
