@@ -7,7 +7,7 @@ const dbName = 'majorProjectDb';
 
 //Database connection
 //mongoose.connect(`mongodb://localhost/${dbName}`);
-mongoose.connect('mongodb://Andrew:daniquegray19@ds263089.mlab.com:63089/majorproject');
+mongoose.connect('mongodb://adminAndrew:password@ds263089.mlab.com:63089/majorproject');
 let db = mongoose.connection;
 //Check for database connection
 db.once('open', () => console.log(`Connected to ${dbName} Database`));
@@ -20,6 +20,7 @@ router.get('/users', (req, res) => User.find({}, (err, users) => res.send(users)
 router.get('/users/:id', (req, res) => User.findById(req.params.id, (err, user) => { // API - Return user based on ID
     if (err) res.status(400).send("Invalid user ID")
     else res.send(user)
+    console.log('api call')
 }));
 router.get('/users/filterBySex/:sex', (req, res) => User.find({ sex: req.params.sex }, (err, user) => { // API - Return users based on sex
     if (err) res.status(400).send("Invalid sex")
@@ -52,6 +53,7 @@ router.get('/users/delete/:id', (req, res) => { //API - Delete user based on ID
 
 router.post('/users', (req, res) => {
     let user = new User();
+    console.log("called")
     for (value in req.query) {
         if (value === "phone") user.contact.phone = req.query.phone;
         else if (value === "email") user.contact.email = req.query.email;
