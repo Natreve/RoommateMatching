@@ -4,7 +4,7 @@
 <head>
 	<title>Register</title>
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.1/dist/semantic.min.css">
 	<link rel="stylesheet" href="/styles/stylesheet.css">
 	<link rel="stylesheet" href="/styles/style.css">
@@ -96,204 +96,511 @@
 		<div class="ui tab" data-tab="characteristics">
 			<div class="field">
 				<div class="grouped fields">
-					<label for="bedtime">1. Normal sleep cycle</label>
+					<label for="peoplePerson">1. I am a people person and love to have many friends visiting.</label>
 					<div class="field">
 						<div class="ui radio checkbox">
-							<input name="bedtime" tabindex="0" class="hidden" type="radio" value="1">
-							<label>10 PM or earlier</label>
+							<input name="peoplePerson" tabindex="0" class="hidden" type="radio" value="1">
+							<label>Strong Agree</label>
 						</div>
 					</div>
 					<div class="field">
 						<div class="ui radio checkbox">
-							<input name="bedtime" tabindex="0" class="hidden" type="radio" value="2">
-							<label>between 10 PM and midnight</label>
+							<input name="peoplePerson" tabindex="0" class="hidden" type="radio" value="2">
+							<label>Agree</label>
 						</div>
 					</div>
 					<div class="field">
 						<div class="ui radio checkbox">
-							<input name="bedtime" tabindex="0" class="hidden" type="radio" value="3">
-							<label>Around midnight</label>
+							<input name="peoplePerson" tabindex="0" class="hidden" type="radio" value="3">
+							<label>Indecisive</label>
 						</div>
 					</div>
 					<div class="field">
 						<div class="ui radio checkbox">
-							<input name="bedtime" tabindex="0" class="hidden" type="radio" value="4">
-							<label>2 AM or later</label>
-						</div>
-					</div>
-				</div>
-				<div class="grouped fields">
-					<label for="allnighter">2. Work pressure sleep cycle</label>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="allnighter" tabindex="0" class="hidden" type="radio" value="1">
-							<label>Several nights per week</label>
+							<input name="peoplePerson" tabindex="0" class="hidden" type="radio" value="4">
+							<label>Disagree</label>
 						</div>
 					</div>
 					<div class="field">
 						<div class="ui radio checkbox">
-							<input name="allnighter" tabindex="0" class="hidden" type="radio" value="2">
-							<label>Once a week</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="allnighter" tabindex="0" class="hidden" type="radio" value="3">
-							<label>Once a month</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="allnighter" tabindex="0" class="hidden" type="radio" value="4">
-							<label>Almost never</label>
+							<input name="peoplePerson" tabindex="0" class="hidden" type="radio" value="4">
+							<label>Strongly Disagree</label>
 						</div>
 					</div>
 				</div>
 				<div class="grouped fields">
-					<label for="workspace">3. Prefered work space</label>
+					<label for="visitorFrequency">2. How often do you plan to invite visitors to your room</label>
 					<div class="field">
 						<div class="ui radio checkbox">
-							<input name="workspace" tabindex="0" class="hidden" type="radio" value="1">
-							<label>At their desk</label>
+							<input name="visitorFrequency" tabindex="0" class="hidden" type="radio" value="1">
+							<label>Once per week</label>
 						</div>
 					</div>
 					<div class="field">
 						<div class="ui radio checkbox">
-							<input name="workspace" tabindex="0" class="hidden" type="radio" value="2">
-							<label>In the library</label>
+							<input name="visitorFrequency" tabindex="0" class="hidden" type="radio" value="2">
+							<label>Twice per week</label>
 						</div>
 					</div>
 					<div class="field">
 						<div class="ui radio checkbox">
-							<input name="workspace" tabindex="0" class="hidden" type="radio" value="3">
-							<label>In a study lounge or similar space</label>
+							<input name="visitorFrequency" tabindex="0" class="hidden" type="radio" value="3">
+							<label>Three or more times per week</label>
 						</div>
 					</div>
 					<div class="field">
 						<div class="ui radio checkbox">
-							<input name="workspace" tabindex="0" class="hidden" type="radio" value="4">
-							<label>I don’t really do work</label>
-						</div>
-					</div>
-				</div>
-				<div class="grouped fields">
-					<label for="smoker">4. Smokes?</label>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="smoker" tabindex="0" class="hidden" type="radio" value="1">
-							<label>Yes</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="smoker" tabindex="0" class="hidden" type="radio" value="2">
-							<label>No</label>
+							<input name="visitorFrequency" tabindex="0" class="hidden" type="radio" value="4">
+							<label>I don't plan to have people over</label>
 						</div>
 					</div>
 				</div>
 				<div class="grouped fields">
-					<label for="drinker">5. Drinks?</label>
+					<label for="visitorNotification">3. Is it important that we notify each other when having a visitor</label>
 					<div class="field">
 						<div class="ui radio checkbox">
-							<input name="drinker" tabindex="0" class="hidden" type="radio" value="1">
-							<label>Yes</label>
+							<input name="visitorNotification" tabindex="0" class="hidden" type="radio" value="1">
+							<label>Very Important</label>
 						</div>
 					</div>
 					<div class="field">
 						<div class="ui radio checkbox">
-							<input name="drinker" tabindex="0" class="hidden" type="radio" value="2">
-							<label>No</label>
+							<input name="visitorNotification" tabindex="0" class="hidden" type="radio" value="2">
+							<label>Important</label>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="visitorNotification" tabindex="0" class="hidden" type="radio" value="3">
+							<label>Indecisive</label>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="visitorNotification" tabindex="0" class="hidden" type="radio" value="4">
+							<label>Unimportant</label>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="visitorNotification" tabindex="0" class="hidden" type="radio" value="4">
+							<label>Very Unimportant</label>
 						</div>
 					</div>
 				</div>
 				<div class="grouped fields">
-					<label for="social">6. Social</label>
+					<label for="romanticVisitor">4. Do you usually tend to have friends/romantic interests back to you room, or do you go to their room?</label>
 					<div class="field">
 						<div class="ui radio checkbox">
-							<input name="social" tabindex="0" class="hidden" type="radio" value="1">
-							<label>like to have people over</label>
+							<input name="romanticVisitor" tabindex="0" class="hidden" type="radio" value="1">
+							<label>I rather people coming to my room</label>
 						</div>
 					</div>
 					<div class="field">
 						<div class="ui radio checkbox">
-							<input name="social" tabindex="0" class="hidden" type="radio" value="2">
-							<label>like to go over out</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="social" tabindex="0" class="hidden" type="radio" value="3">
+							<input name="visitorFrequency" tabindex="0" class="hidden" type="radio" value="2">
 							<label>50/50</label>
 						</div>
 					</div>
 					<div class="field">
 						<div class="ui radio checkbox">
-							<input name="social" tabindex="0" class="hidden" type="radio" value="4">
-							<label>Don't socialise</label>
+							<input name="visitorFrequency" tabindex="0" class="hidden" type="radio" value="2">
+							<label>I don’t have friends or romantic interests.</label>
 						</div>
 					</div>
 				</div>
 				<div class="grouped fields">
-					<label for="househabits">7. House habits</label>
+					<label for="videoCalling">5. I anticipate being in a long-distance relationship that may entail hours of Skyping and weekend-long visits?</label>
 					<div class="field">
 						<div class="ui radio checkbox">
-							<input name="househabits" tabindex="0" class="hidden" type="radio" value="1">
-							<label>OCD</label>
+							<input name="videoCalling" tabindex="0" class="hidden" type="radio" value="1">
+							<label>Strongly Agree</label>
 						</div>
 					</div>
 					<div class="field">
 						<div class="ui radio checkbox">
-							<input name="househabits" tabindex="0" class="hidden" type="radio" value="2">
-							<label>Clean</label>
+							<input name="videoCalling" tabindex="0" class="hidden" type="radio" value="2">
+							<label>Agree</label>
 						</div>
 					</div>
 					<div class="field">
 						<div class="ui radio checkbox">
-							<input name="househabits" tabindex="0" class="hidden" type="radio" value="3">
-							<label>Slightly disorganized</label>
+							<input name="videoCalling" tabindex="0" class="hidden" type="radio" value="2">
+							<label>Indecisive</label>
 						</div>
 					</div>
 					<div class="field">
 						<div class="ui radio checkbox">
-							<input name="househabits" tabindex="0" class="hidden" type="radio" value="4">
-							<label>Messy</label>
+							<input name="videoCalling" tabindex="0" class="hidden" type="radio" value="2">
+							<label>Disagree</label>
 						</div>
 					</div>
 					<div class="field">
 						<div class="ui radio checkbox">
-							<input name="househabits" tabindex="0" class="hidden" type="radio" value="5">
-							<label>Extremely messy</label>
+							<input name="videoCalling" tabindex="0" class="hidden" type="radio" value="2">
+							<label>Strongly Disagree</label>
 						</div>
 					</div>
 				</div>
 				<div class="grouped fields">
-					<label for="roommate">8. Prefered Roomate</label>
+					<label for="roomOrganization">6. How would you describe your room?</label>
 					<div class="field">
 						<div class="ui radio checkbox">
-							<input name="roommate" tabindex="0" class="hidden" type="radio" value="1">
-							<label>Long term friendship</label>
+							<input name="roomOrganization" tabindex="0" class="hidden" type="radio" value="1">
+							<label>Undiagnosed OCD. Everything has its place/label>
 						</div>
 					</div>
 					<div class="field">
 						<div class="ui radio checkbox">
-							<input name="roommate" tabindex="0" class="hidden" type="radio" value="2">
-							<label>Aquantancies</label>
+							<input name="roomOrganization" tabindex="0" class="hidden" type="radio" value="2">
+							<label> Neat but I’m not too obsessive</label>
 						</div>
 					</div>
 					<div class="field">
 						<div class="ui radio checkbox">
-							<input name="roommate" tabindex="0" class="hidden" type="radio" value="3">
-							<label>Not interested in friendship</label>
+							<input name="roomOrganization" tabindex="0" class="hidden" type="radio" value="3">
+							<label> Slightly disorganized</label>
 						</div>
 					</div>
 					<div class="field">
 						<div class="ui radio checkbox">
-							<input name="roommate" tabindex="0" class="hidden" type="radio" value="4">
-							<label>Don't need to interact</label>
+							<input name="roomOrganization" tabindex="0" class="hidden" type="radio" value="4">
+							<label> Pretty messy but not terrible</label>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="roomOrganization" tabindex="0" class="hidden" type="radio" value="4">
+							<label> I'm a hot mess. It’s bad</label>
+						</div>
+					</div>
+				</div>
+				<div class="grouped fields">
+					<label for="cleanliness">7. I am responsible and clean up after myself, I rather doing it on my own, a maid is not necessary.</label>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="cleanliness" tabindex="0" class="hidden" type="radio" value="1">
+							<label>Strongly Agree</label>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="cleanliness" tabindex="0" class="hidden" type="radio" value="2">
+							<label>Agree</label>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="cleanliness" tabindex="0" class="hidden" type="radio" value="3">
+							<label>Indecisive</label>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="cleanliness" tabindex="0" class="hidden" type="radio" value="4">
+							<label>Disagree</label>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="cleanliness" tabindex="0" class="hidden" type="radio" value="5">
+							<label>Strongly Disagree</label>
+						</div>
+					</div>
+				</div>
+				<div class="grouped fields">
+					<label for="chores">8. I believe that household chores</label>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="chores" tabindex="0" class="hidden" type="radio" value="1">
+							<label>Should be assigned</label>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="chores" tabindex="0" class="hidden" type="radio" value="2">
+							<label>Should be done mutually</label>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="chores" tabindex="0" class="hidden" type="radio" value="3">
+							<label>Should be done by whoever thinks to do them</label>
+						</div>
+					</div>
+				</div>
+				<div class="grouped fields">
+					<label for="borrowing">9. My roommate is allowed to borrow books/music/ other items without asking</label>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="borrowing" tabindex="0" class="hidden" type="radio" value="1">
+							<label>Strongly Agree</label>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="borrowing" tabindex="0" class="hidden" type="radio" value="2">
+							<label>Agree</label>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="borrowing" tabindex="0" class="hidden" type="radio" value="3">
+							<label>Indecisive</label>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="borrowing" tabindex="0" class="hidden" type="radio" value="4">
+							<label>Disagree</label>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui radio checkbox">
+							<input name="borrowing" tabindex="0" class="hidden" type="radio" value="5">
+							<label>Strongly Disagree</label>
 						</div>
 					</div>
 				</div>
 			</div>
+			<div class="grouped fields">
+				<label for="privacy">10. Respecting another’s privacy is?</label>
+				<div class="field">
+					<div class="ui radio checkbox">
+						<input name="visitorNotification" tabindex="0" class="hidden" type="radio" value="1">
+						<label>Very Important</label>
+					</div>
+				</div>
+				<div class="field">
+					<div class="ui radio checkbox">
+						<input name="privacy" tabindex="0" class="hidden" type="radio" value="2">
+						<label>Important</label>
+					</div>
+				</div>
+				<div class="field">
+					<div class="ui radio checkbox">
+						<input name="privacy" tabindex="0" class="hidden" type="radio" value="3">
+						<label>Indecisive</label>
+					</div>
+				</div>
+				<div class="field">
+					<div class="ui radio checkbox">
+						<input name="privacy" tabindex="0" class="hidden" type="radio" value="4">
+						<label>Unimportant</label>
+					</div>
+				</div>
+				<div class="field">
+					<div class="ui radio checkbox">
+						<input name="privacy" tabindex="0" class="hidden" type="radio" value="4">
+						<label>Very Unimportant</label>
+					</div>
+				</div>
+			</div>
+			<div class="grouped fields">
+				<label for="space">11. Respecting another’s space is?</label>
+				<div class="field">
+					<div class="ui radio checkbox">
+						<input name="visitorNotification" tabindex="0" class="hidden" type="radio" value="1">
+						<label>Very Important</label>
+					</div>
+				</div>
+				<div class="field">
+					<div class="ui radio checkbox">
+						<input name="space" tabindex="0" class="hidden" type="radio" value="2">
+						<label>Important</label>
+					</div>
+				</div>
+				<div class="field">
+					<div class="ui radio checkbox">
+						<input name="space" tabindex="0" class="hidden" type="radio" value="3">
+						<label>Indecisive</label>
+					</div>
+				</div>
+				<div class="field">
+					<div class="ui radio checkbox">
+						<input name="space" tabindex="0" class="hidden" type="radio" value="4">
+						<label>Unimportant</label>
+					</div>
+				</div>
+				<div class="field">
+					<div class="ui radio checkbox">
+						<input name="space" tabindex="0" class="hidden" type="radio" value="4">
+						<label>Very Unimportant</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="grouped fields">
+				<label for="activeTime">12. I am more active and tend to get more tasks done in the?</label>
+				<div class="field">
+					<div class="ui radio checkbox">
+						<input name="activeTime" tabindex="0" class="hidden" type="radio" value="1">
+						<label>Morning</label>
+					</div>
+				</div>
+				<div class="field">
+					<div class="ui radio checkbox">
+						<input name="activeTime" tabindex="0" class="hidden" type="radio" value="1">
+						<label>Evening</label>
+					</div>
+				</div>
+				<div class="field">
+					<div class="ui radio checkbox">
+						<input name="activeTime" tabindex="0" class="hidden" type="radio" value="2">
+						<label>Night</label>
+					</div>
+				</div>
+			</div>
+			<div class="grouped fields">
+				<label for="lightOut">13. When sleeping my lights must be turned off.</label>
+				<div class="field">
+					<div class="ui radio checkbox">
+						<input name="lightOut" tabindex="0" class="hidden" type="radio" value="1">
+						<label>Strongly Agree</label>
+					</div>
+				</div>
+				<div class="field">
+					<div class="ui radio checkbox">
+						<input name="lightOut" tabindex="0" class="hidden" type="radio" value="2">
+						<label>Agree</label>
+					</div>
+				</div>
+				<div class="field">
+					<div class="ui radio checkbox">
+						<input name="lightOut" tabindex="0" class="hidden" type="radio" value="3">
+						<label>Indecisive</label>
+					</div>
+				</div>
+				<div class="field">
+					<div class="ui radio checkbox">
+						<input name="lightOut" tabindex="0" class="hidden" type="radio" value="4">
+						<label>Disagree</label>
+					</div>
+				</div>
+				<div class="field">
+					<div class="ui radio checkbox">
+						<input name="lightOut" tabindex="0" class="hidden" type="radio" value="5">
+						<label>Strongly Disagree</label>
+					</div>
+				</div>
+			</div>
+			<div class="grouped fields">
+				<label for="music">14. I enjoy listening to music when it is?</label>
+				<div class="field">
+					<div class="ui radio checkbox">
+						<input name="music" tabindex="0" class="hidden" type="radio" value="1">
+						<label>Played loudly</label>
+					</div>
+				</div>
+				<div class="field">
+					<div class="ui radio checkbox">
+						<input name="music" tabindex="0" class="hidden" type="radio" value="2">
+						<label>Played softly</label>
+					</div>
+				</div>
+				<div class="field">
+					<div class="ui radio checkbox">
+						<input name="music" tabindex="0" class="hidden" type="radio" value="3">
+						<label>Played in my earphone or headphone</label>
+					</div>
+				</div>
+				<div class="field">
+					<div class="ui radio checkbox">
+						<input name="music" tabindex="0" class="hidden" type="radio" value="3">
+						<label>i don't enjoy listening to music</label>
+					</div>
+				</div>
+			</div>
+			<div class="grouped fields">
+				<label for="studyEnvi">15. While studying I prefer.</label>
+				<div class="field">
+					<div class="ui radio checkbox">
+						<input name="studyEnvi" tabindex="0" class="hidden" type="radio" value="1">
+						<label>A quiet environment</label>
+					</div>
+				</div>
+				<div class="field">
+					<div class="ui radio checkbox">
+						<input name="studyEnvi" tabindex="0" class="hidden" type="radio" value="2">
+						<label>Listening to music</label>
+					</div>
+				</div>
+				<div class="field">
+					<div class="ui radio checkbox">
+						<input name="studyEnvi" tabindex="0" class="hidden" type="radio" value="3">
+						<label>Watching television</label>
+					</div>
+				</div>
+				<div class="field">
+					<div class="ui radio checkbox">
+						<input name="studyEnvi" tabindex="0" class="hidden" type="radio" value="4">
+						<label>It does not matter</label>
+					</div>
+				</div>
+				<div class="field">
+					<div class="ui radio checkbox">
+						<input name="studyEnvi" tabindex="0" class="hidden" type="radio" value="5">
+						<label>I do not study</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="grouped fields">
+				<label for="studyLocation">16. Where do you prefer to study?</label>
+				<div class="field">
+					<div class="ui radio checkbox">
+						<input name="studyLocation" tabindex="0" class="hidden" type="radio" value="1">
+						<label>My room</label>
+					</div>
+				</div>
+				<div class="field">
+					<div class="ui radio checkbox">
+						<input name="studyLocation" tabindex="0" class="hidden" type="radio" value="2">
+						<label>The library</label>
+					</div>
+				</div>
+				<div class="field">
+					<div class="ui radio checkbox">
+						<input name="studyLocation" tabindex="0" class="hidden" type="radio" value="3">
+						<label>A designated studying area</label>
+					</div>
+				</div>
+				<div class="field">
+					<div class="ui radio checkbox">
+						<input name="studyEnvi" tabindex="0" class="hidden" type="radio" value="4">
+						<label>It does not matter</label>
+					</div>
+				</div>
+				<div class="field">
+					<div class="ui radio checkbox">
+						<input name="studyEnvi" tabindex="0" class="hidden" type="radio" value="5">
+						<label>I do not study</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="grouped fields">
+				<label for="expectation">17. What are you hoping for in a roomate?</label>
+				<div class="field">
+					<div class="ui radio checkbox">
+						<input name="expectation" tabindex="0" class="hidden" type="radio" value="1">
+						<label>A long lasting friendship</label>
+					</div>
+				</div>
+				<div class="field">
+					<div class="ui radio checkbox">
+						<input name="expectation" tabindex="0" class="hidden" type="radio" value="2">
+						<label>If we get along, great; if not, we can just avoid each other.</label>
+					</div>
+				</div>
+				<div class="field">
+					<div class="ui radio checkbox">
+						<input name="expectation" tabindex="0" class="hidden" type="radio" value="3">
+						<label>I don't care about being friends</label>
+					</div>
+				</div>
+			</div>
+
 			<div class="ui divider"></div>
 
 			<div class="ui buttons">
