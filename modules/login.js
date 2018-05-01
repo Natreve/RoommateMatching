@@ -19,9 +19,9 @@ db.once('open', () => console.log(`Connected to ${dbName} Database`));
 db.on('error', (err) => console.log(err));
 
 router.post('/login', (req, res) => {
-    var username = req.query.username,
+    var email = req.query.email,
         password = req.query.password;
-    User.findOne({ name: username, password: password }, (err, user) => {
+    User.findOne({ email: email, password: password }, (err, user) => {
         if (err) res.status(500).send("Server error");
         else if (!user) res.status(404).send("User doesn't excisit");
         else res.status(200).send("All is well");
