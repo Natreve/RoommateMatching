@@ -51,22 +51,6 @@ router.get('/users/delete/:id', (req, res) => { //API - Delete user based on ID
     })
 })
 
-router.post('/users', (req, res) => {
-    let user = new User();
-    console.log("called")
-    for (value in req.query) {
-        if (value === "phone") user.contact.phone = req.query.phone;
-        else if (value === "email") user.contact.email = req.query.email;
-        else user[value] = req.query[value];
-    }
-    user.match.status = false;
-    user.match.id = null;
-    user.save((err) => {
-        if (err) res.status(500).send("There was an error creating the user");//status 500 Internal Server Error
-        res.status(201).send("User Created");
-    });
-
-});
 router.post('/users/update/:id', (req, res) => User.findById(req.params.id, (err, user) => {
     //let user = new User();
 }));

@@ -26,7 +26,7 @@ $(function () {
             console.log("successful submission");
             $.ajax({
                 type: 'POST',
-                url: 'api/users?' + $("form").serialize(),
+                url: 'register?' + $("form").serialize(),
                 data: $("form").serialize(),
                 success: function (response) {
                     console.log("successful submission");

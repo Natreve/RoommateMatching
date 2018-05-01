@@ -19,10 +19,8 @@ db.once('open', () => console.log(`Connected to ${dbName} Database`));
 //Check for database errors
 db.on('error', (err) => console.log(err));
 
-router.get('/login', (req, res)=> {
-    res.sendFile(rootFolder.rootFolder + '/views/login.html')
-});
-router.post('/login', (req, res) => {
+router.get('/register', (req, res) => res.sendFile(rootFolder.rootFolder + '/views/register.html'));
+router.post('/register', (req, res) => {
     var email = req.query.email,
         password = req.query.password;
     User.findOne({ email: email, password: password }, (err, user) => {
@@ -32,8 +30,20 @@ router.post('/login', (req, res) => {
     })
 });
 
-router.get('/profile', (req, res) => {
-    if (!req.session.user) return res.status(401).send("Not authorised");
-    return res.status(200).sendFile(rootFolder.rootFolder+ '/views/profile.html');
+router.post('/register', (req, res) => {
+    let user = new User();
+    for (value in req.query) {
+        if (value === "phone") user.contact.phone = req.query.phone;
+        else if (value === "email") user.contact.email = req.query.email;
+        else user[value] = req.query[value];
+    }
+    user.match.status = false;
+    user.match.id = null;
+    user.save((err) => {
+        if (err) res.status(500).send("There was an error creating the user");//status 500 Internal Server Error
+        res.status(200).sendFile(rootFolder.rootFolder + '/views/profile.html');
+    });
+
 });
+
 module.exports = router;
