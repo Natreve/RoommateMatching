@@ -13,11 +13,6 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/views/index.html')
 });
 app.get('/home', (req, res) => res.sendFile(__dirname + '/views/index.html'));
-app.get('/terms', (req, res) => res.sendFile(__dirname + '/views/terms.html'));//Splash page
-app.get('/register', (req, res) => res.sendFile(__dirname + '/views/register.html'));
-app.get('/preferences', (req, res) => res.sendFile(__dirname + '/views/preferences.html'));
-app.get('/characteristics', (req, res) => res.sendFile(__dirname + '/views/characteristics.html'));
-app.get('/login', (req, res)=> res.sendFile(__dirname + '/views/login.html'));
 
 //API Routes
 app.use('/',require('./modules/login'));

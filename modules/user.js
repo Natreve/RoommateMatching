@@ -27,7 +27,7 @@ let userSchema = mongoose.Schema({
         roommate: Number
     },
     match: {
-        status: Boolean,
+        status: String,//matched,tentative, null
         id: mongoose.Schema.Types.ObjectId
     }
 });

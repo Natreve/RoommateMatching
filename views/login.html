@@ -4,14 +4,14 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Room Sync</title>
+    <title>Login</title>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.css">
     <link rel="stylesheet" href="/styles/stylesheet.css">
 </head>
 
 <body>
-    <form class="ui login form" method="POST" action="/login">
+    <form class="ui login form">
         <div class="ui raised very padded text container">
 
             <div class="ui segment">
@@ -37,6 +37,9 @@
                 </div>
                 <button class="ui large red submit button" type="submit">Login</button>
                 <div class="ui error message"></div>
+                <div class="ui compact hidden negative message">
+                    <p>Incorrect email or password</p>
+                </div>
             </div>
             <div class="ui message">
                 New to us?
@@ -47,5 +50,6 @@
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.1/dist/semantic.min.js"></script>
-<script src="/scripts/script.js"></script>
+<script src="/scripts/loginScript.js"></script>
+
 </html>

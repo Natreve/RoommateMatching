@@ -1,14 +1,13 @@
 $(function () {
     $('.dropdown').dropdown();
     $('.ui.checkbox').checkbox();
-    //$('.ui.radio.checkbox').checkbox();
     $('.inverted.red.button').on('click', function () {
         var tab = $(this).attr('data-tab');
         console.log(tab);
         $('.secondary.menu .item').removeClass('active');
         $(`.${tab}.item`).addClass('active');
         $(`.${tab}.item`).removeClass('disabled');
-        
+
         $.tab('change tab', $(this).attr('data-tab'));
     });
     $('.ui.form').form({
@@ -26,9 +25,8 @@ $(function () {
             $.ajax({
                 type: 'POST',
                 url: 'register?' + $("form").serialize(),
-                data: $("form").serialize(),
                 success: function (response) {
-                    console.log("successful submission");
+                    if(response) window.location = '/login'
                 },
                 failure: function (errMsg) {
                     console.log(errMsg);
@@ -37,32 +35,6 @@ $(function () {
             return false;
         },
         onFailure: (event, fields) => {
-            console.log("unsuccessful submission")
-            return false;
-        }
-    })
-    $('.ui.login.form').form({
-        fields: {
-            email: 'email',
-            password: 'empty'
-        },
-        onSuccess: function(event, fields) {
-            console.log("successful submission");
-            /*$.ajax({
-                type: 'POST',
-                url: 'login?' + $("form").serialize(),
-                data: $("form").serialize(),
-                success: function (response) {
-                    console.log("successful submission");
-                    return false;
-                },
-                failure: function (errMsg) {
-                    console.log(errMsg);
-                }
-            });*/
-            return true;
-        },
-        onFailure: function(event, fields){
             console.log("unsuccessful submission")
             return false;
         }

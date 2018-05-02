@@ -8,14 +8,15 @@ const dbName = 'majorProjectDb';
 const path = require('path');
 const rootFolder = require('../rootFolder');
 
-//Database connection
-//mongoose.connect(`mongodb://localhost/${dbName}`);
-mongoose.connect('mongodb://adminAndrew:password@ds263089.mlab.com:63089/majorproject');
-let db = mongoose.connection;
-//Check for database connection
-db.once('open', () => console.log(`Connected to ${dbName} Database`));
-//Check for database errors
-db.on('error', (err) => console.log(err));
+function databaseConnection() {
+    mongoose.connect('mongodb://adminAndrew:password@ds263089.mlab.com:63089/majorproject');
+    let db = mongoose.connection;
+    //Check for database connection
+    db.once('open', () => console.log(`Connected to ${dbName} Database`));
+    //Check for database errors
+    db.on('error', (err) => console.log(err));
+    return db;
+}
 
 router.get('/register', (req, res) => {
     if (req.session.user) res.sendFile(rootFolder.rootFolder + '/views/profile.html');
@@ -23,19 +24,23 @@ router.get('/register', (req, res) => {
 });
 
 router.post('/register', (req, res) => {
+    let db = databaseConnection();
     let user = new User();
-    for (value in req.query) {
-        if (value === "phone") user.contact.phone = req.query.phone;
-        else if (value === "email") user.contact.email = req.query.email;
-        else user[value] = req.query[value];
+    var form = req.query;
+    for (field in form) {
+        if (field == "contact") for (contact in form[field]) user[field][contact] = form[field][contact]//console.log(`${field}: {${contact}: ${form[field][contact]}}`)//user[contact] = form[field][contact];
+        else if (field == "pref") for (pref in field) user[pref] = form[field][pref];
+        else if (field == "char") for (pref in field) user[pref] = form[field][char];
+        else user[field] = form[field];
     }
-    user.match.status = false;
+    user.match.status = null;
     user.match.id = null;
     user.save((err) => {
-        if (err) res.status(500).send("There was an error creating the user");//status 500 Internal Server Error
-        res.status(200).sendFile(rootFolder.rootFolder + '/views/profile.html');
+        if (err) res.status(500).send("Internal Server Error");//status 500 Internal Server Error
+        else res.send(true)//res.redirect('/login');//res.status(200).sendFile(rootFolder.rootFolder + '/views/login.html');
+        db.close();
     });
-
+    
 });
 
 module.exports = router;
