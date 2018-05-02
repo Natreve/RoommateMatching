@@ -12,999 +12,990 @@
 </head>
 
 <body id="register">
-	<div class="ui segment" id="headr">
-		<img class="ui fluid image" src="/imgs/roomatehead.jpg">
-	</div>
-	<div class="ui pointing secondary container menu">
-		<a class="active personal item" data-tab="personal">Personal Details</a>
-		<a class="characteristics item disabled" data-tab="characteristics">Characteristics</a>
-		<a class="preferences item disabled" data-tab="preferences">Preferences</a>
-		<a class="terms item disabled" data-tab="terms">Terms & Agreements</a>
-	</div>
-	<form class="ui register form">
-		<div class="ui active tab" data-tab="personal">
-			<div class="field">
-				<div class="three fields">
-					<div class="five wide field">
-						<label>Name</label>
-						<input type="text" name="name" placeholder="eg. Andrew Gray">
-					</div>
-					<div class="four wide field">
-						<label>Date of birth</label>
-						<input type="date" name="dob" placeholder="date">
-					</div>
-					<div class="four wide field">
-						<label>Sex</label>
-						<div class="ui selection dropdown">
-							<input type="hidden" name="sex">
-							<div class="default text">Sex</div>
-							<i class="dropdown icon"></i>
-							<div class="menu">
-								<div class="item" data-value="male">
-									<i class="mars icon"></i> Male</div>
-								<div class="item" data-value="female">
-									<i class="venus icon"></i>Female</div>
+
+	<img class="ui fluid .banner-image image" src="/imgs/roomatehead.jpg">
+
+	<div>
+		<div class="ui fluid red pointing three item secondary container menu">
+			<a class="active personal item" data-tab="personal">Personal Details</a>
+			<a class="characteristics item disabled" data-tab="characteristics">Characteristics</a>
+			<a class="preferences item disabled" data-tab="preferences">Preferences</a>
+		</div>
+		<form class="ui register form">
+			<div class="ui container">
+				<div class="ui active personal tab" data-tab="personal">
+					<div class="field">
+						<div class="three fields">
+							<div class="five wide field">
+								<label>Name</label>
+								<input type="text" name="name" placeholder="eg. Andrew Gray">
+							</div>
+							<div class="four wide field">
+								<label>Date of birth</label>
+								<input type="date" name="dob" placeholder="date">
+							</div>
+							<div class="four wide field">
+								<label>Sex</label>
+								<div class="ui selection dropdown">
+									<input type="hidden" name="sex">
+									<div class="default text">Sex</div>
+									<i class="dropdown icon"></i>
+									<div class="menu">
+										<div class="item" data-value="male">
+											<i class="mars icon"></i> Male</div>
+										<div class="item" data-value="female">
+											<i class="venus icon"></i>Female</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="two fields">
+							<div class="five wide field">
+								<label>Email</label>
+								<input type="text" name="contact[email]" placeholder="eg. gray.andrew@utech.edu.jm">
+							</div>
+							<div class="four wide field">
+								<label>Phone #</label>
+								<input type="text" name="contact[phone]" placeholder="eg. 876-123-4567">
+							</div>
+						</div>
+						<div class="thirteen wide field">
+							<label>Address</label>
+							<input type="text" name="address" placeholder="eg. Lot 32B manatee close, manley meadows, kingston 2">
+						</div>
+						<div class="two fields">
+							<div class="four wide field">
+								<label>Password</label>
+								<input type="password" name="password" id="password" placeholder="Password">
+							</div>
+							<div class="four wide field">
+								<label>Varify Password</label>
+								<input type="password" name="password2" id="password2" placeholder="Re-type Password">
+							</div>
+						</div>
+
+						<div class="four wide field">
+							<label>Personality</label>
+							<div class="ui selection dropdown">
+								<input type="hidden" name="personality">
+								<div class="default text">Personality</div>
+								<i class="dropdown icon"></i>
+								<div class="menu">
+									<div class="item" data-value="Architect">Architect</div>
+									<div class="item" data-value="Logician">Logician</div>
+									<div class="item" data-value="Commander">Commander</div>
+									<div class="item" data-value="Debater">Debater</div>
+									<div class="item" data-value="Advocate">Advocate</div>
+									<div class="item" data-value="Mediator">Mediator</div>
+									<div class="item" data-value="Protagonist">Protagonist</div>
+									<div class="item" data-value="Campaigner">Campaigner</div>
+									<div class="item" data-value="Logistician">Logistician</div>
+									<div class="item" data-value="Defender">Defender</div>
+									<div class="item" data-value="Executive">Executive</div>
+									<div class="item" data-value="Consul">Consul</div>
+									<div class="item" data-value="Virtuoso">Virtuoso</div>
+									<div class="item" data-value="Adventurer">Adventurer</div>
+									<div class="item" data-value="Entrepeneur">Entrepeneur</div>
+									<div class="item" data-value="Entertainer">Entertainer</div>
+								</div>
 							</div>
 						</div>
 					</div>
+					<div class="ui divider"></div>
+					<div class="ui inverted red characteristics button">NEXT</div>
 				</div>
 
-				<div class="two fields">
-					<div class="five wide field">
-						<label>Email</label>
-						<input type="text" name="contact[email]" placeholder="eg. gray.andrew@utech.edu.jm">
-					</div>
-					<div class="four wide field">
-						<label>Phone #</label>
-						<input type="text" name="contact[phone]" placeholder="eg. 876-123-4567">
-					</div>
-				</div>
-				<div class="thirteen wide field">
-					<label>Address</label>
-					<input type="text" name="address" placeholder="eg. Lot 32B manatee close, manley meadows, kingston 2">
-				</div>
-				<div class="four wide field">
-					<label>Password</label>
-					<input type="password" name="password" placeholder="Password">
-				</div>
-				<div class="four wide field">
-					<label>Personality</label>
-					<div class="ui selection dropdown">
-						<input type="hidden" name="personality">
-						<div class="default text">Personality</div>
-						<i class="dropdown icon"></i>
-						<div class="menu">
-							<div class="item" data-value="Architect">Architect</div>
-							<div class="item" data-value="Logician">Logician</div>
-							<div class="item" data-value="Commander">Commander</div>
-							<div class="item" data-value="Debater">Debater</div>
-							<div class="item" data-value="Advocate">Advocate</div>
-							<div class="item" data-value="Mediator">Mediator</div>
-							<div class="item" data-value="Protagonist">Protagonist</div>
-							<div class="item" data-value="Campaigner">Campaigner</div>
-							<div class="item" data-value="Logistician">Logistician</div>
-							<div class="item" data-value="Defender">Defender</div>
-							<div class="item" data-value="Executive">Executive</div>
-							<div class="item" data-value="Consul">Consul</div>
-							<div class="item" data-value="Virtuoso">Virtuoso</div>
-							<div class="item" data-value="Adventurer">Adventurer</div>
-							<div class="item" data-value="Entrepeneur">Entrepeneur</div>
-							<div class="item" data-value="Entertainer">Entertainer</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="ui divider"></div>
-			<div class="ui inverted red next button" data-tab="characteristics">NEXT</div>
-		</div>
-		<div class="ui tab" data-tab="characteristics">
-			<div class="field">
-				<div class="grouped fields">
-					<label for="pref[peoplePerson]">1.</label>
+				<div class="ui characteristics tab" data-tab="characteristics">
+					<!--Preferences-->
 					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="pref[peoplePerson]" tabindex="0" class="hidden" type="radio" value="1">
-							<label>I am a people person and love to have many friends visiting.</label>
+						<div class="grouped fields">
+							<label for="pref[peoplePerson]">1.</label>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[peoplePerson]" tabindex="0" class="hidden" type="radio" value="1">
+									<label>I am a people person and love to have many friends visiting.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[peoplePerson]" tabindex="0" class="hidden" type="radio" value="2">
+									<label>I am a people person but I prefer visiting friends than having them over.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[peoplePerson]" tabindex="0" class="hidden" type="radio" value="3">
+									<label>I prefer to be alone; I don’t like having people in my space.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[peoplePerson]" tabindex="0" class="hidden" type="radio" value="4">
+									<label>I am neither here nor there with friends and it doesn’t matter if they visit.</label>
+								</div>
+							</div>
+						</div>
+						<div class="grouped fields">
+							<label for="pref[visitorFrequency]">2.</label>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[visitorFrequency]" tabindex="0" class="hidden" type="radio" value="1">
+									<label>I am more likely to have visitors in my room once a week</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[visitorFrequency]" tabindex="0" class="hidden" type="radio" value="2">
+									<label>I am more likely to have visitors in my room twice a week</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[visitorFrequency]" tabindex="0" class="hidden" type="radio" value="3">
+									<label>I am more likely to have visitors in my room three or more times per week</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[visitorFrequency]" tabindex="0" class="hidden" type="radio" value="4">
+									<label>I don't plan to invite people to my room</label>
+								</div>
+							</div>
+						</div>
+						<div class="grouped fields">
+							<label for="pref[visitorNotification]">3.</label>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[visitorNotification]" tabindex="0" class="hidden" type="radio" value="1">
+									<label>It is of paramount importance that we notify each other when having a visitor.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[visitorNotification]" tabindex="0" class="hidden" type="radio" value="2">
+									<label>I am fine with notifying my roommate before having a visitor but my roommate doesn’t have to do the same.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[visitorNotification]" tabindex="0" class="hidden" type="radio" value="3">
+									<label>I don’t need to notify my roommate before having a visitor but my roommate needs to notify me before having others
+										over.
+									</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[visitorNotification]" tabindex="0" class="hidden" type="radio" value="4">
+									<label>I do not think it is necessary for any of us to notify the other before a visitor arrives.</label>
+								</div>
+							</div>
+						</div>
+						<div class="grouped fields">
+							<label for="pref[romanticVisitor]">4.</label>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[romanticVisitor]" tabindex="0" class="hidden" type="radio" value="1">
+									<label>Usually, I invite my romantic interests to my room.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[romanticVisitor]" tabindex="0" class="hidden" type="radio" value="2">
+									<label>I rather visiting the rooms of my romantic interests than having them visiting my room.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[romanticVisitor]" tabindex="0" class="hidden" type="radio" value="2">
+									<label>It does not matter where my romantic interests and I meet, as long as we meet.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[romanticVisitor]]" tabindex="0" class="hidden" type="radio" value="2">
+									<label>There is no need for my romantic interest to visit my room him/her to visit mine.</label>
+								</div>
+							</div>
+						</div>
+						<div class="grouped fields">
+							<label for="pref[videoCalling]">5.</label>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[videoCalling]" tabindex="0" class="hidden" type="radio" value="1">
+									<label>I anticipate being in a long-distance relationship that may entail hours of video calling.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[videoCalling]" tabindex="0" class="hidden" type="radio" value="2">
+									<label>I anticipate being in a long-distance relationship that will NOT entail hours of video.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[videoCalling]" tabindex="0" class="hidden" type="radio" value="2">
+									<label>I don’t partake in long-distance relationships.</label>
+								</div>
+							</div>
+						</div>
+						<div class="grouped fields">
+							<label for="pref[roomOrganization]">6.</label>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[roomOrganization]" tabindex="0" class="hidden" type="radio" value="1">
+									<label>I have OCD. My room has to be extremely neat, everything has its place.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[roomOrganization]" tabindex="0" class="hidden" type="radio" value="2">
+									<label>My room is neat but I am not too obsessive.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[roomOrganization]" tabindex="0" class="hidden" type="radio" value="3">
+									<label>My room is slightly disorganized.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[roomOrganization]" tabindex="0" class="hidden" type="radio" value="4">
+									<label>My room is usually pretty messy but not terrible.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[roomOrganization]" tabindex="0" class="hidden" type="radio" value="4">
+									<label>I am a hot mess, I am disorganized and usually have difficulty finding stuff when needed.</label>
+								</div>
+							</div>
+						</div>
+						<div class="grouped fields">
+							<label for="pref[cleanliness]">7.</label>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[cleanliness]" tabindex="0" class="hidden" type="radio" value="1">
+									<label>I am responsible and clean up after myself, I prefer doing it on my own, a maid is not necessary.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[cleanliness]" tabindex="0" class="hidden" type="radio" value="2">
+									<label>I am responsible and clean up after myself but not immediately, I clean when I feel the urge to.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[cleanliness]" tabindex="0" class="hidden" type="radio" value="3">
+									<label>We should all have maids; I do not want to clean up my own mess.</label>
+								</div>
+							</div>
+						</div>
+						<div class="grouped fields">
+							<label for="pref[chores]">8.</label>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[chores]" tabindex="0" class="hidden" type="radio" value="1">
+									<label>I believe that household chores should be assigned.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[chores]" tabindex="0" class="hidden" type="radio" value="2">
+									<label>There is no need to assign household chores, if you notice something needs to be done, do it.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[chores]" tabindex="0" class="hidden" type="radio" value="3">
+									<label>Roommates should alternate doing household chores.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[chores]" tabindex="0" class="hidden" type="radio" value="3">
+									<label>My roommate is responsible for doing all household chore; I hate doing chores.</label>
+								</div>
+							</div>
+						</div>
+						<div class="grouped fields">
+							<label for="pref[borrowing]">9.</label>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[borrowing]" tabindex="0" class="hidden" type="radio" value="1">
+									<label>My roommate is allowed to borrow books/music/ other items without asking.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[borrowing]" tabindex="0" class="hidden" type="radio" value="2">
+									<label>My items are personal; my roommate should not borrow them without asking.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[borrowing]" tabindex="0" class="hidden" type="radio" value="3">
+									<label>My roommate should allow me to use their items without asking but they should ask before using my items.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[borrowing]" tabindex="0" class="hidden" type="radio" value="4">
+									<label>I don’t mind sharing with my roommate but he/she must ask before borrowing or using.</label>
+								</div>
+							</div>
+						</div>
+						<div class="grouped fields">
+							<label for="pref[privacy]">10.</label>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[visitorNotification]" tabindex="0" class="hidden" type="radio" value="1">
+									<label>I am a strong believer of respecting another’s privacy.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[privacy]" tabindex="0" class="hidden" type="radio" value="2">
+									<label>Your privacy does not matter; I do whatever I want.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[privacy]" tabindex="0" class="hidden" type="radio" value="3">
+									<label>Privacy is overrated but if you need me to respect your privacy, I will.</label>
+								</div>
+							</div>
+						</div>
+						<div class="grouped fields">
+							<label for="pref[activeTime]">11.</label>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[activeTime]" tabindex="0" class="hidden" type="radio" value="1">
+									<label>I am active and tend to get more tasks done in the morning.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[activeTime]" tabindex="0" class="hidden" type="radio" value="2">
+									<label>I am active and tend to get more tasks done in the evening.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[activeTime]" tabindex="0" class="hidden" type="radio" value="3">
+									<label>I am active and tend to get more tasks done in the night.</label>
+								</div>
+							</div>
+						</div>
+						<div class="grouped fields">
+							<label for="pref[lightOut]">12.</label>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[lightOut]" tabindex="0" class="hidden" type="radio" value="1">
+									<label>When sleeping my lights must be turned off.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[lightOut]" tabindex="0" class="hidden" type="radio" value="2">
+									<label>I cannot sleep with the lights on, I must be in complete darkness.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[lightOut]" tabindex="0" class="hidden" type="radio" value="3">
+									<label>I prefer sleeping with a low light, a night light is perfect for me.</label>
+								</div>
+							</div>
+						</div>
+						<div class="grouped fields">
+							<label for="pref[music]">13.</label>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[music]" tabindex="0" class="hidden" type="radio" value="1">
+									<label>I enjoy listening to pref[music] when it is played loudly.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[music]" tabindex="0" class="hidden" type="radio" value="2">
+									<label>I don’t like loud noises and rather listening to music softly.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[music]" tabindex="0" class="hidden" type="radio" value="3">
+									<label>I enjoy listening to music in my earphone or headphone.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[music]" tabindex="0" class="hidden" type="radio" value="3">
+									<label>i don't enjoy listening to music.</label>
+								</div>
+							</div>
+						</div>
+						<div class="grouped fields">
+							<label for="pref[studyEnvi]">14.</label>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[studyEnvi]" tabindex="0" class="hidden" type="radio" value="1">
+									<label>While studying, I like being in a quiet environment.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[studyEnvi]" tabindex="0" class="hidden" type="radio" value="2">
+									<label>While studying, I like being in a loud environment.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[studyEnvi]" tabindex="0" class="hidden" type="radio" value="3">
+									<label>While studying, I like listening to music.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[studyEnvi]" tabindex="0" class="hidden" type="radio" value="4">
+									<label>While studying, I like watching television.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[studyEnvi]" tabindex="0" class="hidden" type="radio" value="5">
+									<label>My environment does not matter when I need to study.</label>
+								</div>
+							</div>
+						</div>
+						<div class="grouped fields">
+							<label for="pref[studyLocation]">15.</label>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[studyLocation]" tabindex="0" class="hidden" type="radio" value="1">
+									<label>I prefer being in my room while studying.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[studyLocation]" tabindex="0" class="hidden" type="radio" value="2">
+									<label>I prefer being in the library while studying.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[studyLocation]" tabindex="0" class="hidden" type="radio" value="3">
+									<label>I prefer being in the designated studying area while studying.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[studyLocation]" tabindex="0" class="hidden" type="radio" value="4">
+									<label>It does not matter where I am, I study anywhere.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[studyLocation]" tabindex="0" class="hidden" type="radio" value="5">
+									<label>I do not study.</label>
+								</div>
+							</div>
+						</div>
+						<div class="grouped fields">
+							<label for="pref[expectation]">16.</label>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[expectation]" tabindex="0" class="hidden" type="radio" value="1">
+									<label>I hope my roommate will have a long lasting friendship</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[expectation]" tabindex="0" class="hidden" type="radio" value="2">
+									<label>If my roommate and I get along, great; if not, we can just avoid each other.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="pref[expectation]" tabindex="0" class="hidden" type="radio" value="3">
+									<label>I don’t care about being friends with my roommate.</label>
+								</div>
+							</div>
 						</div>
 					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="pref[peoplePerson]" tabindex="0" class="hidden" type="radio" value="2">
-							<label>I am a people person but I prefer visiting friends than having them over.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="pref[peoplePerson]" tabindex="0" class="hidden" type="radio" value="3">
-							<label>I prefer to be alone; I don’t like having people in my space.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="pref[peoplePerson]" tabindex="0" class="hidden" type="radio" value="4">
-							<label>I am neither here nor there with friends and it doesn’t matter if they visit.</label>
-						</div>
-					</div>
-				</div>
-
-				<div class="grouped fields">
-					<label for="pref[visitorFrequency]">2.</label>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="pref[visitorFrequency]" tabindex="0" class="hidden" type="radio" value="1">
-							<label>I am more likely to have visitors in my room once a week</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="pref[visitorFrequency]" tabindex="0" class="hidden" type="radio" value="2">
-							<label>I am more likely to have visitors in my room twice a week</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="pref[visitorFrequency]" tabindex="0" class="hidden" type="radio" value="3">
-							<label>I am more likely to have visitors in my room three or more times per week</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="pref[visitorFrequency]" tabindex="0" class="hidden" type="radio" value="4">
-							<label>I don't plan to invite people to my room</label>
-						</div>
-					</div>
-				</div>
-				<div class="grouped fields">
-					<label for="pref[visitorNotification]">3.</label>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="pref[visitorNotification]" tabindex="0" class="hidden" type="radio" value="1">
-							<label>It is of paramount importance that we notify each other when having a visitor.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="pref[visitorNotification]" tabindex="0" class="hidden" type="radio" value="2">
-							<label>I am fine with notifying my roommate before having a visitor but my roommate doesn’t have to do the same.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="pref[visitorNotification]" tabindex="0" class="hidden" type="radio" value="3">
-							<label>I don’t need to notify my roommate before having a visitor but my roommate needs to notify me before having others
-								over.
-							</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="pref[visitorNotification]" tabindex="0" class="hidden" type="radio" value="4">
-							<label>I do not think it is necessary for any of us to notify the other before a visitor arrives.</label>
-						</div>
-					</div>
-				</div>
-				<div class="grouped fields">
-					<label for="pref[romanticVisitor]">4.</label>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="pref[romanticVisitor]" tabindex="0" class="hidden" type="radio" value="1">
-							<label>Usually, I invite my romantic interests to my room.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="pref[romanticVisitor]" tabindex="0" class="hidden" type="radio" value="2">
-							<label>I rather visiting the rooms of my romantic interests than having them visiting my room.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="pref[romanticVisitor]" tabindex="0" class="hidden" type="radio" value="2">
-							<label>It does not matter where my romantic interests and I meet, as long as we meet.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="pref[romanticVisitor]]" tabindex="0" class="hidden" type="radio" value="2">
-							<label>There is no need for my romantic interest to visit my room him/her to visit mine.</label>
-						</div>
-					</div>
-				</div>
-				<div class="grouped fields">
-					<label for="pref[videoCalling]">5.</label>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="pref[videoCalling]" tabindex="0" class="hidden" type="radio" value="1">
-							<label>I anticipate being in a long-distance relationship that may entail hours of video calling.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="pref[videoCalling]" tabindex="0" class="hidden" type="radio" value="2">
-							<label>I anticipate being in a long-distance relationship that will NOT entail hours of video.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="pref[videoCalling]" tabindex="0" class="hidden" type="radio" value="2">
-							<label>I don’t partake in long-distance relationships.</label>
-						</div>
-					</div>
-				</div>
-				<div class="grouped fields">
-					<label for="pref[roomOrganization]">6.</label>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="pref[roomOrganization]" tabindex="0" class="hidden" type="radio" value="1">
-							<label>I have OCD. My room has to be extremely neat, everything has its place.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="pref[roomOrganization]" tabindex="0" class="hidden" type="radio" value="2">
-							<label>My room is neat but I am not too obsessive.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="pref[roomOrganization]" tabindex="0" class="hidden" type="radio" value="3">
-							<label>My room is slightly disorganized.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="pref[roomOrganization]" tabindex="0" class="hidden" type="radio" value="4">
-							<label>My room is usually pretty messy but not terrible.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="pref[roomOrganization]" tabindex="0" class="hidden" type="radio" value="4">
-							<label>I am a hot mess, I am disorganized and usually have difficulty finding stuff when needed.</label>
-						</div>
-					</div>
-				</div>
-				<div class="grouped fields">
-					<label for="pref[cleanliness]">7.</label>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="pref[cleanliness]" tabindex="0" class="hidden" type="radio" value="1">
-							<label>I am responsible and clean up after myself, I prefer doing it on my own, a maid is not necessary.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="pref[cleanliness]" tabindex="0" class="hidden" type="radio" value="2">
-							<label>I am responsible and clean up after myself but not immediately, I clean when I feel the urge to.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="pref[cleanliness]" tabindex="0" class="hidden" type="radio" value="3">
-							<label>We should all have maids; I do not want to clean up my own mess.</label>
-						</div>
-					</div>
-				</div>
-				<div class="grouped fields">
-					<label for="pref[chores]">8.</label>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="pref[chores]" tabindex="0" class="hidden" type="radio" value="1">
-							<label>I believe that household chores should be assigned.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="pref[chores]" tabindex="0" class="hidden" type="radio" value="2">
-							<label>There is no need to assign household chores, if you notice something needs to be done, do it.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="pref[chores]" tabindex="0" class="hidden" type="radio" value="3">
-							<label>Roommates should alternate doing household chores.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="pref[chores]" tabindex="0" class="hidden" type="radio" value="3">
-							<label>My roommate is responsible for doing all household chore; I hate doing chores.</label>
-						</div>
-					</div>
-				</div>
-
-				<div class="grouped fields">
-					<label for="pref[borrowing]">9.</label>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="pref[borrowing]" tabindex="0" class="hidden" type="radio" value="1">
-							<label>My roommate is allowed to borrow books/music/ other items without asking.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="pref[borrowing]" tabindex="0" class="hidden" type="radio" value="2">
-							<label>My items are personal; my roommate should not borrow them without asking.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="pref[borrowing]" tabindex="0" class="hidden" type="radio" value="3">
-							<label>My roommate should allow me to use their items without asking but they should ask before using my items.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="pref[borrowing]" tabindex="0" class="hidden" type="radio" value="4">
-							<label>I don’t mind sharing with my roommate but he/she must ask before borrowing or using.</label>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="grouped fields">
-				<label for="pref[privacy]">10.</label>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="char[visitorNotification]" tabindex="0" class="hidden" type="radio" value="1">
-						<label>I am a strong believer of respecting another’s privacy.</label>
-					</div>
-				</div>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="pref[privacy]" tabindex="0" class="hidden" type="radio" value="2">
-						<label>Your privacy does not matter; I do whatever I want.</label>
-					</div>
-				</div>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="pref[privacy]" tabindex="0" class="hidden" type="radio" value="3">
-						<label>Privacy is overrated but if you need me to respect your privacy, I will.</label>
-					</div>
-				</div>
-			</div>
-			<div class="grouped fields">
-				<label for="pref[activeTime]">11.</label>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="pref[activeTime]" tabindex="0" class="hidden" type="radio" value="1">
-						<label>I am active and tend to get more tasks done in the morning.</label>
-					</div>
-				</div>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="pref[activeTime]" tabindex="0" class="hidden" type="radio" value="2">
-						<label>I am active and tend to get more tasks done in the evening.</label>
-					</div>
-				</div>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="pref[activeTime]" tabindex="0" class="hidden" type="radio" value="3">
-						<label>I am active and tend to get more tasks done in the night.</label>
-					</div>
-				</div>
-			</div>
-
-			<div class="grouped fields">
-				<label for="pref[lightOut]">12.</label>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="pref[lightOut]" tabindex="0" class="hidden" type="radio" value="1">
-						<label>When sleeping my lights must be turned off.</label>
-					</div>
-				</div>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="pref[lightOut]" tabindex="0" class="hidden" type="radio" value="2">
-						<label>I cannot sleep with the lights on, I must be in complete darkness.</label>
-					</div>
-				</div>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="pref[lightOut]" tabindex="0" class="hidden" type="radio" value="3">
-						<label>I prefer sleeping with a low light, a night light is perfect for me.</label>
-					</div>
-				</div>
-			</div>
-			<div class="grouped fields">
-				<label for="pref[music]">13.</label>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="pref[music]" tabindex="0" class="hidden" type="radio" value="1">
-						<label>I enjoy listening to pref[music] when it is played loudly.</label>
-					</div>
-				</div>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="pref[music]" tabindex="0" class="hidden" type="radio" value="2">
-						<label>I don’t like loud noises and rather listening to music softly.</label>
-					</div>
-				</div>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="pref[music]" tabindex="0" class="hidden" type="radio" value="3">
-						<label>I enjoy listening to music in my earphone or headphone.</label>
-					</div>
-				</div>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="pref[music]" tabindex="0" class="hidden" type="radio" value="3">
-						<label>i don't enjoy listening to music.</label>
-					</div>
-				</div>
-			</div>
-			<div class="grouped fields">
-				<label for="pref[studyEnvi]">14.</label>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="pref[studyEnvi]" tabindex="0" class="hidden" type="radio" value="1">
-						<label>While studying, I like being in a quiet environment.</label>
-					</div>
-				</div>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="pref[studyEnvi]" tabindex="0" class="hidden" type="radio" value="2">
-						<label>While studying, I like being in a loud environment.</label>
-					</div>
-				</div>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="pref[studyEnvi]" tabindex="0" class="hidden" type="radio" value="3">
-						<label>While studying, I like listening to music.</label>
-					</div>
-				</div>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="pref[studyEnvi]" tabindex="0" class="hidden" type="radio" value="4">
-						<label>While studying, I like watching television.</label>
-					</div>
-				</div>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="pref[studyEnvi]" tabindex="0" class="hidden" type="radio" value="5">
-						<label>My environment does not matter when I need to study.</label>
-					</div>
-				</div>
-			</div>
-
-			<div class="grouped fields">
-				<label for="pref[studyLocation]">15.</label>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="pref[studyLocation]" tabindex="0" class="hidden" type="radio" value="1">
-						<label>I prefer being in my room while studying.</label>
-					</div>
-				</div>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="pref[studyLocation]" tabindex="0" class="hidden" type="radio" value="2">
-						<label>I prefer being in the library while studying.</label>
-					</div>
-				</div>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="pref[studyLocation]" tabindex="0" class="hidden" type="radio" value="3">
-						<label>I prefer being in the designated studying area while studying.</label>
-					</div>
-				</div>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="pref[studyLocation]" tabindex="0" class="hidden" type="radio" value="4">
-						<label>It does not matter where I am, I study anywhere.</label>
-					</div>
-				</div>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="pref[studyLocation]" tabindex="0" class="hidden" type="radio" value="5">
-						<label>I do not study.</label>
-					</div>
-				</div>
-			</div>
-
-			<div class="grouped fields">
-				<label for="pref[expectation]">16.</label>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="pref[expectation]" tabindex="0" class="hidden" type="radio" value="1">
-						<label>I hope my roommate will have a long lasting friendship</label>
-					</div>
-				</div>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="pref[expectation]" tabindex="0" class="hidden" type="radio" value="2">
-						<label>If my roommate and I get along, great; if not, we can just avoid each other.</label>
-					</div>
-				</div>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="pref[expectation]" tabindex="0" class="hidden" type="radio" value="3">
-						<label>I don’t care about being friends with my roommate.</label>
-					</div>
-				</div>
-			</div>
-			<div class="ui divider"></div>
-
-			<div class="ui buttons">
-				<div class="ui inverted red back button" data-tab="personal">Back</div>
-				<div class="ui inverted red next button" data-tab="preferences">NEXT</div>
-			</div>
-		</div>
-
-		<div class="ui tab" data-tab="preferences">
-			<div class="field">
-				<div class="grouped fields">
-					<label for="char[peoplePerson]">1.</label>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="char[peoplePerson]" tabindex="0" class="hidden" type="radio" value="1">
-							<label>I prefer if my roommate is a people person and loves to have many friends visiting.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="char[peoplePerson]" tabindex="0" class="hidden" type="radio" value="2">
-							<label>I prefer if my roommate is a people person but prefers visiting friends than having them over.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="char[peoplePerson]" tabindex="0" class="hidden" type="radio" value="3">
-							<label>I prefer if my roommate prefers to be alone; and does not like having people in his/her space.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="char[peoplePerson]" tabindex="0" class="hidden" type="radio" value="4">
-							<label>I prefer if my roommate is neither here nor there with friends and does not care if they visit it doesn’t matter if
-								they visit.
-							</label>
-						</div>
+					<div class="ui divider"></div>
+					<div class="ui buttons">
+						<div class="ui inverted red back button" data-tab="personal" data-current-tab="characteristics">Back</div>
+						<div class="ui inverted red preferences button" data-tab="preferences">NEXT</div>
 					</div>
 				</div>
 
-				<div class="grouped fields">
-					<label for="char[visitorFrequency]">2.</label>
+				<div class="ui preferences tab" data-tab="preferences">
+					<!--Characteristics-->
 					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="char[visitorFrequency]" tabindex="0" class="hidden" type="radio" value="1">
-							<label>I prefer if my roommate is more likely to have visitors in his/her room once a week.</label>
+						<div class="grouped fields">
+							<label for="char[peoplePerson]">1.</label>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[peoplePerson]" tabindex="0" class="hidden" type="radio" value="1">
+									<label>I prefer if my roommate is a people person and loves to have many friends visiting.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[peoplePerson]" tabindex="0" class="hidden" type="radio" value="2">
+									<label>I prefer if my roommate is a people person but prefers visiting friends than having them over.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[peoplePerson]" tabindex="0" class="hidden" type="radio" value="3">
+									<label>I prefer if my roommate prefers to be alone; and does not like having people in his/her space.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[peoplePerson]" tabindex="0" class="hidden" type="radio" value="4">
+									<label>I prefer if my roommate is neither here nor there with friends and does not care if they visit it doesn’t matter
+										if they visit.
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="grouped fields">
+							<label for="char[visitorFrequency]">2.</label>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[visitorFrequency]" tabindex="0" class="hidden" type="radio" value="1">
+									<label>I prefer if my roommate is more likely to have visitors in his/her room once a week.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[visitorFrequency]" tabindex="0" class="hidden" type="radio" value="2">
+									<label>I prefer if my roommate is more likely to have visitors in his/her room twice a week.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[visitorFrequency]" tabindex="0" class="hidden" type="radio" value="3">
+									<label>I prefer if My roommate is more likely to have visitors in his/her room three or more. times per week.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[visitorFrequency]" tabindex="0" class="hidden" type="radio" value="4">
+									<label>I prefer if I don’t plant to have people over.</label>
+								</div>
+							</div>
+						</div>
+						<div class="grouped fields">
+							<label for="char[visitorNotification]">3.</label>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[visitorNotification]" tabindex="0" class="hidden" type="radio" value="1">
+									<label>I prefer if my roommate shares the belief that it is of paramount importance that we notify each other before having
+										a visitor.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[visitorNotification]" tabindex="0" class="hidden" type="radio" value="2">
+									<label>I prefer if my roommate shares the belief that I should notify him/her before having a visitor but he/she does not
+										have to do the same.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[visitorNotification]" tabindex="0" class="hidden" type="radio" value="3">
+									<label>I prefer if my roommate shares the belief that I don’t need to notify him/her before. having a visitor but my he/she
+										needs to notify me before having others over.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[visitorNotification]" tabindex="0" class="hidden" type="radio" value="4">
+									<label>I prefer if my roommate shares the belief that it is not necessary for any of us to notify. the other before a visitor
+										arrives.
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="grouped fields">
+							<label for="char[romanticVisitor]">4.</label>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[romanticVisitor]" tabindex="0" class="hidden" type="radio" value="1">
+									<label>I prefer if my roommate invites his/her romantic interests to our room.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[romanticVisitor]" tabindex="0" class="hidden" type="radio" value="2">
+									<label>I prefer my roommate visits the rooms of his/her romantic interests than having them visiting our room.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[romanticVisitor]" tabindex="0" class="hidden" type="radio" value="2">
+									<label>It does not matter where my roommate’s romantic interests and him/her meet.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[romanticVisitor]" tabindex="0" class="hidden" type="radio" value="2">
+									<label>I prefer if my roommate believes that there is no need for him/her and his/ her romantic interest to visit each
+										other’s rooms.
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="grouped fields">
+							<label for="char[videoCalling]">5.</label>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[videoCalling]" tabindex="0" class="hidden" type="radio" value="1">
+									<label>I prefer if my roommate anticipates being in a long-distance relationship that may entail hours of video calling.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[videoCalling]" tabindex="0" class="hidden" type="radio" value="2">
+									<label>I prefer if my roommate anticipates being in a long-distance relationship that will not entail hours of video calling.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[videoCalling]" tabindex="0" class="hidden" type="radio" value="2">
+									<label>I prefer if my roommate does not partake in long-distance relationships.</label>
+								</div>
+							</div>
+						</div>
+						<div class="grouped fields">
+							<label for="char[roomOrganization]">6.</label>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[roomOrganization]" tabindex="0" class="hidden" type="radio" value="1">
+									<label>I prefer is my roommate has OCD and keeps our room extremely neat.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[roomOrganization]" tabindex="0" class="hidden" type="radio" value="2">
+									<label>I prefer if my roommate is neat but not too obsessive.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[roomOrganization]" tabindex="0" class="hidden" type="radio" value="3">
+									<label>I prefer if my roommate is slightly disorganized.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[roomOrganization]" tabindex="0" class="hidden" type="radio" value="4">
+									<label>I prefer if my roommate is pretty messy but not terrible.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[roomOrganization]" tabindex="0" class="hidden" type="radio" value="4">
+									<label>I prefer if my roommate is a hot mess and is very disorganized. </label>
+								</div>
+							</div>
+						</div>
+						<div class="grouped fields">
+							<label for="char[cleanliness]">7.</label>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[cleanliness]" tabindex="0" class="hidden" type="radio" value="1">
+									<label>I prefer if my roommate is responsible and cleans up after himself/herself.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[cleanliness]" tabindex="0" class="hidden" type="radio" value="2">
+									<label>I prefer if my roommate is responsible and cleans up after himself/herself but it does not have to be immediately,
+										he/she clean when the urge is felt.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[cleanliness]" tabindex="0" class="hidden" type="radio" value="3">
+									<label>We should all have maids; My roommate should not have to clean up his/her own mess.</label>
+								</div>
+							</div>
+						</div>
+						<div class="grouped fields">
+							<label for="char[chores]">8.</label>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[chores]" tabindex="0" class="hidden" type="radio" value="1">
+									<label>I prefer if my roommate believes that household chores should be assigned.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[chores]" tabindex="0" class="hidden" type="radio" value="2">
+									<label> I prefer if my roommate believes that there is no need to assign household chores, if one notices something needs
+										to be done, they do it.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[chores]" tabindex="0" class="hidden" type="radio" value="3">
+									<label>I prefer if my roommate wants us to alternate household chores.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[chores]" tabindex="0" class="hidden" type="radio" value="3">
+									<label>I prefer if my roommate takes responsibility for doing all household chore; I hate doing chores.</label>
+								</div>
+							</div>
+						</div>
+						<div class="grouped fields">
+							<label for="char[borrowing]">9.</label>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[borrowing]" tabindex="0" class="hidden" type="radio" value="1">
+									<label>I prefer if my roommate agrees that I can borrow books/music/ other items without asking.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[borrowing]" tabindex="0" class="hidden" type="radio" value="2">
+									<label>I prefer if my roommate agrees that his/her items are personal and I should not borrow them without asking.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[borrowing]" tabindex="0" class="hidden" type="radio" value="3">
+									<label>I prefer if my roommate is ok with me using his/her items but he/she asks before using mine.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[borrowing]" tabindex="0" class="hidden" type="radio" value="4">
+									<label>I prefer if my roommate doesn’t mind sharing with me but I must ask before borrowing.</label>
+								</div>
+							</div>
+						</div>
+						<div class="grouped fields">
+							<label for="char[privacy]">10.</label>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[privacy]" tabindex="0" class="hidden" type="radio" value="1">
+									<label>I prefer if my roommate is a strong believer of respecting another’s privacy.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[privacy]" tabindex="0" class="hidden" type="radio" value="2">
+									<label>I prefer if roommate believes that privacy does not matter; I do whatever I want.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[privacy]" tabindex="0" class="hidden" type="radio" value="3">
+									<label>Privacy is overrated but if you need me to respect your privacy, I will.</label>
+								</div>
+							</div>
+						</div>
+						<div class="grouped fields">
+							<label for="char[activeTime]">11.</label>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[activeTime]" tabindex="0" class="hidden" type="radio" value="1">
+									<label>I prefer if my roommate is active and tend to get more tasks done in the morning.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[activeTime]" tabindex="0" class="hidden" type="radio" value="2">
+									<label>I prefer if my roommate is active and tend to get more tasks done in the evening.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[activeTime]" tabindex="0" class="hidden" type="radio" value="3">
+									<label>I prefer if my roommate is active and tend to get more tasks done in the night.</label>
+								</div>
+							</div>
+						</div>
+						<div class="grouped fields">
+							<label for="char[lightOut]">12.</label>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[lightOut]" tabindex="0" class="hidden" type="radio" value="1">
+									<label>I prefer if my roommate sleeps with the ceiling lights on.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[lightOut]" tabindex="0" class="hidden" type="radio" value="2">
+									<label>I prefer if my roommate sleeps in complete darkness.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[lightOut]" tabindex="0" class="hidden" type="radio" value="3">
+									<label>I prefer if my roommate with a low night light.</label>
+								</div>
+							</div>
+						</div>
+						<div class="grouped fields">
+							<label for="char[music]">13.</label>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[music]" tabindex="0" class="hidden" type="radio" value="1">
+									<label>I prefer if my roommate enjoy listening to music when it is played loudly.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[music]" tabindex="0" class="hidden" type="radio" value="2">
+									<label>I prefer if my roommate doesn’t like loud noises and prefers listening to music softly.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[music]" tabindex="0" class="hidden" type="radio" value="3">
+									<label>I prefer if my roommate enjoys listening to music in earphones or headphones.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[music]" tabindex="0" class="hidden" type="radio" value="3">
+									<label>I prefer if my roommate doesn’t enjoy listening to music.</label>
+								</div>
+							</div>
+						</div>
+						<div class="grouped fields">
+							<label for="char[studyEnvi]">14.</label>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[studyEnvi]" tabindex="0" class="hidden" type="radio" value="1">
+									<label>I prefer if my roommate likes being in a quiet environment while studying.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[studyEnvi]" tabindex="0" class="hidden" type="radio" value="2">
+									<label>I prefer if my roommate likes being in a loud environment while studying.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[studyEnvi]" tabindex="0" class="hidden" type="radio" value="3">
+									<label>I prefer if my roommate likes listening to music while studying.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[studyEnvi]" tabindex="0" class="hidden" type="radio" value="4">
+									<label>I prefer if my roommate likes watching television while studying.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[studyEnvi]" tabindex="0" class="hidden" type="radio" value="5">
+									<label>I prefer if the environment does not affect my roommate while studying.</label>
+								</div>
+							</div>
+						</div>
+						<div class="grouped fields">
+							<label for="char[studyLocation]">15.</label>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[studyLocation]" tabindex="0" class="hidden" type="radio" value="1">
+									<label>I prefer if my roommate likes being in our room while studying.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[studyLocation]" tabindex="0" class="hidden" type="radio" value="2">
+									<label>I prefer if my roommate likes being in the library while studying.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[studyLocation]" tabindex="0" class="hidden" type="radio" value="3">
+									<label>I prefer being in the designated studying area while studying.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[studyLocation]" tabindex="0" class="hidden" type="radio" value="4">
+									<label>I prefer if my roommate does not have a preference for studying area.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[studyLocation]" tabindex="0" class="hidden" type="radio" value="5">
+									<label>I prefer if my roommate does not study.</label>
+								</div>
+							</div>
+						</div>
+						<div class="grouped fields">
+							<label for="char[expectation]">16.</label>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[expectation]" tabindex="0" class="hidden" type="radio" value="1">
+									<label>I hope my roommate wants to have a long lasting friendship.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[expectation]" tabindex="0" class="hidden" type="radio" value="2">
+									<label> I hope my roommate is ok with; if we get along, great; if not, we can just avoid each other.</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="ui radio checkbox">
+									<input name="char[expectation]" tabindex="0" class="hidden" type="radio" value="3">
+									<label>I hope my roommate does not care about being friends with me.</label>
+								</div>
+							</div>
 						</div>
 					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="char[visitorFrequency]" tabindex="0" class="hidden" type="radio" value="2">
-							<label>I prefer if my roommate is more likely to have visitors in his/her room twice a week.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="char[visitorFrequency]" tabindex="0" class="hidden" type="radio" value="3">
-							<label>I prefer if My roommate is more likely to have visitors in his/her room three or more. times per week.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="char[visitorFrequency]" tabindex="0" class="hidden" type="radio" value="4">
-							<label>I prefer if I don’t plant to have people over.</label>
-						</div>
+					<div class="ui divider"></div>
+					<div class="ui buttons">
+						<div class="ui inverted red back button" data-tab="characteristics" data-current-tab="preferences">Back</div>
+						<div class="ui inverted red terms button">Terms of Service</div>
 					</div>
 				</div>
-				<div class="grouped fields">
-					<label for="char[visitorNotification]">3.</label>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="char[visitorNotification]" tabindex="0" class="hidden" type="radio" value="1">
-							<label>I prefer if my roommate shares the belief that it is of paramount importance that we notify each other before having
-								a visitor.</label>
-						</div>
+			</div>
+			<div class="ui tiny terms modal">
+				<div class="header">Roommate Sync asks for</div>
+				<div class="content">
+					<ul class="list">
+						<li>
+							<strong>Contact Information</strong> so we can allow your matches or external placement agencies to contact you.</li>
+						<li>
+							<strong>Personal Details</strong>, which are kept secured and will only be used to generate best matches.</li>
+						<li>
+							<strong>Honesty</strong>, the accuracy of your Information is important. Please try your best to select options that best
+							match your view</li>
+					</ul>
+					<!--<div class="field">
+					<div class="ui checkbox">
+						<input tabindex="0" class="hidden" name="terms" type="checkbox" value="agree">
+						<label>I agree to the Terms and Conditions</label>
 					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="char[visitorNotification]" tabindex="0" class="hidden" type="radio" value="2">
-							<label>I prefer if my roommate shares the belief that I should notify him/her before having a visitor but he/she does not
-								have to do the same.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="char[visitorNotification]" tabindex="0" class="hidden" type="radio" value="3">
-							<label>I prefer if my roommate shares the belief that I don’t need to notify him/her before. having a visitor but my he/she
-								needs to notify me before having others over.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="char[visitorNotification]" tabindex="0" class="hidden" type="radio" value="4">
-							<label>I prefer if my roommate shares the belief that it is not necessary for any of us to notify. the other before a visitor
-								arrives.
-							</label>
-						</div>
-					</div>
+				</div>-->
+					<div class="ui error message"></div>
 				</div>
-				<div class="grouped fields">
-					<label for="char[romanticVisitor]">4.</label>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="char[romanticVisitor]" tabindex="0" class="hidden" type="radio" value="1">
-							<label>I prefer if my roommate invites his/her romantic interests to our room.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="char[romanticVisitor]" tabindex="0" class="hidden" type="radio" value="2">
-							<label>I prefer my roommate visits the rooms of his/her romantic interests than having them visiting our room.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="char[romanticVisitor]" tabindex="0" class="hidden" type="radio" value="2">
-							<label>It does not matter where my roommate’s romantic interests and him/her meet.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="char[romanticVisitor]" tabindex="0" class="hidden" type="radio" value="2">
-							<label>I prefer if my roommate believes that there is no need for him/her and his/ her romantic interest to visit each other’s
-								rooms.</label>
-						</div>
-					</div>
-				</div>
-				<div class="grouped fields">
-					<label for="char[videoCalling]">5.</label>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="char[videoCalling]" tabindex="0" class="hidden" type="radio" value="1">
-							<label>I prefer if my roommate anticipates being in a long-distance relationship that may entail hours of video calling.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="char[videoCalling]" tabindex="0" class="hidden" type="radio" value="2">
-							<label>I prefer if my roommate anticipates being in a long-distance relationship that will not entail hours of video calling.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="char[videoCalling]" tabindex="0" class="hidden" type="radio" value="2">
-							<label>I prefer if my roommate does not partake in long-distance relationships.</label>
-						</div>
-					</div>
-				</div>
-				<div class="grouped fields">
-					<label for="char[roomOrganization]">6.</label>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="char[roomOrganization]" tabindex="0" class="hidden" type="radio" value="1">
-							<label>I prefer is my roommate has OCD and keeps our room extremely neat.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="char[roomOrganization]" tabindex="0" class="hidden" type="radio" value="2">
-							<label>I prefer if my roommate is neat but not too obsessive.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="char[roomOrganization]" tabindex="0" class="hidden" type="radio" value="3">
-							<label>I prefer if my roommate is slightly disorganized.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="char[roomOrganization]" tabindex="0" class="hidden" type="radio" value="4">
-							<label>I prefer if my roommate is pretty messy but not terrible.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="char[roomOrganization]" tabindex="0" class="hidden" type="radio" value="4">
-							<label>I prefer if my roommate is a hot mess and is very disorganized. </label>
-						</div>
-					</div>
-				</div>
-				<div class="grouped fields">
-					<label for="char[cleanliness]">7.</label>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="char[cleanliness]" tabindex="0" class="hidden" type="radio" value="1">
-							<label>I prefer if my roommate is responsible and cleans up after himself/herself.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="char[cleanliness]" tabindex="0" class="hidden" type="radio" value="2">
-							<label>I prefer if my roommate is responsible and cleans up after himself/herself but it does not have to be immediately,
-								he/she clean when the urge is felt.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="char[cleanliness]" tabindex="0" class="hidden" type="radio" value="3">
-							<label>We should all have maids; My roommate should not have to clean up his/her own mess.</label>
-						</div>
-					</div>
-				</div>
-				<div class="grouped fields">
-					<label for="char[chores]">8.</label>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="char[chores]" tabindex="0" class="hidden" type="radio" value="1">
-							<label>I prefer if my roommate believes that household chores should be assigned.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="char[chores]" tabindex="0" class="hidden" type="radio" value="2">
-							<label> I prefer if my roommate believes that there is no need to assign household chores, if one notices something needs to be
-							done, they do it.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="char[chores]" tabindex="0" class="hidden" type="radio" value="3">
-							<label>I prefer if my roommate wants us to alternate household chores.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="char[chores]" tabindex="0" class="hidden" type="radio" value="3">
-							<label>I prefer if my roommate takes responsibility for doing all household chore; I hate doing chores.</label>
-						</div>
-					</div>
+				<div class="actions">
+					<div class="ui cancel back button" data-tab="characteristics">Back</div>
+					<div class="ui red inverted submit button">Agree</div>
 				</div>
 
-				<div class="grouped fields">
-					<label for="char[borrowing]">9.</label>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="char[borrowing]" tabindex="0" class="hidden" type="radio" value="1">
-							<label>I prefer if my roommate agrees that I can borrow books/music/ other items without asking.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="char[borrowing]" tabindex="0" class="hidden" type="radio" value="2">
-							<label>I prefer if my roommate agrees that his/her items are personal and I should not borrow them without asking.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="char[borrowing]" tabindex="0" class="hidden" type="radio" value="3">
-							<label>I prefer if my roommate is ok with me using his/her items but he/she asks before using mine.</label>
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui radio checkbox">
-							<input name="char[borrowing]" tabindex="0" class="hidden" type="radio" value="4">
-							<label>I prefer if my roommate doesn’t mind sharing with me but I must ask before borrowing.</label>
-						</div>
-					</div>
-				</div>
 			</div>
-			<div class="grouped fields">
-				<label for="char[privacy]">10.</label>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="char[privacy]" tabindex="0" class="hidden" type="radio" value="1">
-						<label>I prefer if my roommate is a strong believer of respecting another’s privacy.</label>
-					</div>
-				</div>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="char[privacy]" tabindex="0" class="hidden" type="radio" value="2">
-						<label>I prefer if roommate believes that privacy does not matter; I do whatever I want.</label>
-					</div>
-				</div>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="char[privacy]" tabindex="0" class="hidden" type="radio" value="3">
-						<label>Privacy is overrated but if you need me to respect your privacy, I will.</label>
-					</div>
-				</div>
-			</div>
-			<div class="grouped fields">
-				<label for="char[activeTime]">11.</label>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="char[activeTime]" tabindex="0" class="hidden" type="radio" value="1">
-						<label>I prefer if my roommate is active and tend to get more tasks done in the morning.</label>
-					</div>
-				</div>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="char[activeTime]" tabindex="0" class="hidden" type="radio" value="2">
-						<label>I prefer if my roommate is active and tend to get more tasks done in the evening.</label>
-					</div>
-				</div>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="char[activeTime]" tabindex="0" class="hidden" type="radio" value="3">
-						<label>I prefer if my roommate is active and tend to get more tasks done in the night.</label>
-					</div>
-				</div>
-			</div>
-
-			<div class="grouped fields">
-				<label for="char[lightOut]">12.</label>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="char[lightOut]" tabindex="0" class="hidden" type="radio" value="1">
-						<label>I prefer if my roommate sleeps with the ceiling lights on.</label>
-					</div>
-				</div>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="char[lightOut]" tabindex="0" class="hidden" type="radio" value="2">
-						<label>I prefer if my roommate sleeps in complete darkness.</label>
-					</div>
-				</div>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="char[lightOut]" tabindex="0" class="hidden" type="radio" value="3">
-						<label>I prefer if my roommate with a low night light.</label>
-					</div>
-				</div>
-			</div>
-			<div class="grouped fields">
-				<label for="char[music]">13.</label>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="char[music]" tabindex="0" class="hidden" type="radio" value="1">
-						<label>I prefer if my roommate enjoy listening to music when it is played loudly.</label>
-					</div>
-				</div>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="char[music]" tabindex="0" class="hidden" type="radio" value="2">
-						<label>I prefer if my roommate doesn’t like loud noises and prefers listening to music softly.</label>
-					</div>
-				</div>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="char[music]" tabindex="0" class="hidden" type="radio" value="3">
-						<label>I prefer if my roommate enjoys listening to music in earphones or headphones.</label>
-					</div>
-				</div>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="char[music]" tabindex="0" class="hidden" type="radio" value="3">
-						<label>I prefer if my roommate doesn’t enjoy listening to music.</label>
-					</div>
-				</div>
-			</div>
-			<div class="grouped fields">
-				<label for="char[studyEnvi]">14.</label>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="char[studyEnvi]" tabindex="0" class="hidden" type="radio" value="1">
-						<label>I prefer if my roommate likes being in a quiet environment while studying.</label>
-					</div>
-				</div>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="char[studyEnvi]" tabindex="0" class="hidden" type="radio" value="2">
-						<label>I prefer if my roommate likes being in a loud environment while studying.</label>
-					</div>
-				</div>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="char[studyEnvi]" tabindex="0" class="hidden" type="radio" value="3">
-						<label>I prefer if my roommate likes listening to music while studying.</label>
-					</div>
-				</div>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="char[studyEnvi]" tabindex="0" class="hidden" type="radio" value="4">
-						<label>I prefer if my roommate likes watching television while studying.</label>
-					</div>
-				</div>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="char[studyEnvi]" tabindex="0" class="hidden" type="radio" value="5">
-						<label>I prefer if the environment does not affect my roommate while studying.</label>
-					</div>
-				</div>
-			</div>
-
-			<div class="grouped fields">
-				<label for="char[studyLocation]">15.</label>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="char[studyLocation]" tabindex="0" class="hidden" type="radio" value="1">
-						<label>I prefer if my roommate likes being in our room while studying.</label>
-					</div>
-				</div>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="char[studyLocation]" tabindex="0" class="hidden" type="radio" value="2">
-						<label>I prefer if my roommate likes being in the library while studying.</label>
-					</div>
-				</div>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="char[studyLocation]" tabindex="0" class="hidden" type="radio" value="3">
-						<label>I prefer being in the designated studying area while studying.</label>
-					</div>
-				</div>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="char[studyLocation]" tabindex="0" class="hidden" type="radio" value="4">
-						<label>I prefer if my roommate does not have a preference for studying area.</label>
-					</div>
-				</div>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="char[studyLocation]" tabindex="0" class="hidden" type="radio" value="5">
-						<label>I prefer if my roommate does not study.</label>
-					</div>
-				</div>
-			</div>
-
-			<div class="grouped fields">
-				<label for="char[expectation]">16.</label>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="char[expectation]" tabindex="0" class="hidden" type="radio" value="1">
-						<label>I hope my roommate wants to have a long lasting friendship.</label>
-					</div>
-				</div>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="char[expectation]" tabindex="0" class="hidden" type="radio" value="2">
-						<label> I hope my roommate is ok with; if we get along, great; if not, we can just avoid each other.</label>
-					</div>
-				</div>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input name="char[expectation]" tabindex="0" class="hidden" type="radio" value="3">
-						<label>I hope my roommate does not care about being friends with me.</label>
-					</div>
-				</div>
-			</div>
-
-			<div class="ui divider"></div>
-
-			<div class="ui buttons">
-				<div class="ui inverted red back button" data-tab="characteristics">Back</div>
-				<div class="ui inverted red next button" data-tab="terms">NEXT</div>
-			</div>
-		</div>
-
-		<div class="ui tab" data-tab="terms">
-			<div class="ui message">
-				<div class="header">
-					Roommate Sync asks for
-				</div>
-				<ul class="list">
-					<li>
-						<strong>Contact Information</strong> so we can allow your matches or external placement agencies to contact you.</li>
-					<li>
-						<strong>Personal Details</strong>, which are kept secured and will only be used to generate best matches.</li>
-					<li>
-						<strong>Honesty</strong>, the accuracy of your Information is important. Please try your best to select options that best match
-						your view</li>
-				</ul>
-			</div>
-			<div class="field">
-				<div class="ui checkbox">
-					<input tabindex="0" class="hidden" name="terms" type="checkbox" value="agree">
-					<label>I agree to the Terms and Conditions</label>
-				</div>
-			</div>
-			<div class="ui divider"></div>
-
-			<div class="ui buttons">
-				<div class="ui inverted red back button" data-tab="characteristics">Back</div>
-				<div class="ui positive submit button">Complete</div>
-			</div>
-			<div class="ui error message"></div>
-		</div>
-		<div class="ui tab" data-tab="complete">
-			<div class="ui divider"></div>
-		</div>
-	</form>
-	<h5 class="ui dividing header"></h5>
-	<footer>School of Computing and Information Technology Major Project 2018. Roommate Matching.</footer>
+		</form>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.1/dist/semantic.min.js"></script>

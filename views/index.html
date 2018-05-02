@@ -8,32 +8,60 @@
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.css">
 	<link rel="stylesheet" href="/styles/stylesheet.css">
+	<link rel="stylesheet" href="/styles/indexStyle.css">
 </head>
 
 <body>
-	<!-- Banner -->
-	<div class="ui center aligned segment" id="bg">
-		<img class="ui image" src="/imgs/roomates.jpg" alt="">
-	</div>
+	<div class="ui fixed text menu">
+		<!--<div class="item">
+			<img src="/img">
+		</div>-->
+		<div class="ui right  item">
+			<a class="ui huge red icon button" href="/login">
+				<i class="sign out alternate icon"></i>Sign in
+			</a>
 
-	<!-- Sticker -->
-
-	<div class="ui center aligned segnent" id="cont">
-		<div class="ui center aligned segment" id="rect">
-			<div class="ui segment" id="inner">
-				<h1> ROOMMATE </h1>
-				<h2> MATCHING MAGIC </h2>
-				<hr id="vider">
-				<h5> College Roomate Matching Service </h5>
-			</div>
 		</div>
+	</div>
+	<div class="banner-image">
+		<div class="ui center aligned grid container">
+			<div class="row">
+				<div class="ui basic segment">
+					<div class="ui flat compact message">
+						<div class="header">
+							<h1>ROOMMATE</h1>
+						</div>
+						<h2>MATCHING MAGIC</h2>
+						<div class="ui custom divider"></div>
+						<h2>College Roomate Matching Service</h2>
+						<p>A School of Computing and Information Technology Major project. Here to help you find the best fit person to share
+							a room with.</p>
+					</div>
+					<!--<div id="rect">
+						<div id="inner">
+							<h1 class="ui huge header"> ROOMMATE </h1>
+							<h2 class="ui large header"> MATCHING MAGIC </h2>
+							<hr id="vider">
+							<h5 class="ui small header"> College Roomate Matching Service </h5>
+						</div>
+					</div>-->
+				</div>
+			</div>
+			<div class="row">
+				<button class="ui large circular red invereted icon button" data-content="Find out more" data-offset="50">
+					<i class="icon help"></i>
+				</button>
+				<div class="ui labeled button" tabindex="0">
+					<a class="ui red button" href="/register">
+						<i class="users icon"></i> Sign up
+					</a>
+					<div class="ui basic red left pointing label">
+						1,048
+					</div>
+				</div>
+			</div>
 
-		<a href="/register">
-			<div class="ui button" tabindex="0" id="signup">SIGN UP</div>
-		</a>
-		<a href="/login">
-			<div class="ui button" tabindex="0" id="loginBtn">LOG IN</div>
-		</a>
+		</div>
 	</div>
 
 	<h5 class="ui dividing header"></h5>
