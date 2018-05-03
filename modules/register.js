@@ -31,9 +31,10 @@ router.post('/register', (req, res) => {
     for (field in form) {
         if (field == "contact") for (contact in form[field]) user[field][contact] = form[field][contact]//
         else if (field == "pref") for (pref in form[field]) user[field][pref] = form[field][pref];
-        else if (field == "char") for (char in form[field]) user[field][pref] = form[field][pref];
+        else if (field == "char") for (char in form[field]) user[field][char] = form[field][char ];
         else user[field] = form[field];
     }
+    
     user.match.status = null;
     user.match.id = null;
     user.save((err) => {
