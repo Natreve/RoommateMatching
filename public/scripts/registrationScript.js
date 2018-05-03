@@ -1,7 +1,9 @@
 $(function () {
     $('.dropdown').dropdown();
     $('.ui.checkbox').checkbox();
-
+    $('.ui.sticky').sticky({
+            context: '#register'
+        });
     $('.personal.tab').transition({
         animation: 'fade in',
         duration: '1s',
