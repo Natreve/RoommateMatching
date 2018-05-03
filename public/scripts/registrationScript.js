@@ -153,6 +153,9 @@ $(function () {
                 url: 'register?' + $("form").serialize(),
                 success: function (response) {
                     if (response) window.location = '/login'
+                    else {
+                        $('.error.message').removeClass("hidden").html("There was a server error")
+                    }
                 },
                 failure: function (errMsg) {
                     console.log(errMsg);
