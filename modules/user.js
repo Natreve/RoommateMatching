@@ -13,19 +13,8 @@ let userSchema = mongoose.Schema({
     },
     address: { type:String, required:true},
     personality: { type:String, required:true},
-    char:{
-        
-    },
-    pref: {
-        bedTime: Number,
-        allnighter: Number,
-        workspace: Number,
-        smoker: Number,
-        drinker: Number,
-        social: Number,
-        househabits: Number,
-        roommate: Number
-    },
+    char: [mongoose.Schema.Types.Mixed],
+    pref: [mongoose.Schema.Types.Mixed],
     match: {
         status: String,//matched,tentative, null
         id: mongoose.Schema.Types.ObjectId
