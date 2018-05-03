@@ -34,7 +34,10 @@ function generateMatchGraph(filter) {
                 index += 2; //Find match for user after current
             } else {
                 for (let i = 0; i < users[index].char.length; i++) {
-                    for (let like in users[index].char[i]) currentDistance += Math.abs(users[currentIndex].pref[i][like] - users[index].char[i][like]);// //COMPUTES DISTANCE 
+                    for (let like in users[index].char[i]) {
+                        let distance = Math.abs(users[currentIndex].pref[i][like] - users[index].char[i][like]);//COMPUTES DISTANCE 
+                        if (distance > 0) currentDistance++
+                    }
                 }
                 if (currentDistance < storedDistance) {
                     if (!users[index].match.status || users[index].match.status == "tentative") {
@@ -59,11 +62,11 @@ function generateMatchGraph(filter) {
                 fs.writeFile(path, JSON.stringify(users), (err) => {
                     if (err) console.log(err); //throw
                     console.log("New graph file created");
-                    
+
                     /*fs.readFile(path, 'utf8', (err, data) => {
                         console.log(JSON.parse(data)[1].name);
                     });*/
-                    
+
                 });
                 console.log("Finished");
                 break;
@@ -71,67 +74,67 @@ function generateMatchGraph(filter) {
         }
     });
 }
-function findBestMatch(userID,filter) {
+function findBestMatch(userID, filter) {
     let db = databaseConnection();
     //Filter by personality if no filter match enter database memebers
-    User.findById(userID, (err, user)=>{
-        console.log(user.name)
-    })
-    /*User.find(filter || {}, (err, users) => {
-        db.close()
-        if (!users.length || users.length < 2) return false;
-
+    User.find(filter || {}, (err, users) => {
+        db.close();
+        let index = 0;
+        let endLoop = 0;
         let storedDistance = 999;
-        let index = 1;
-        let currentIndex = 0;
-        let storedMatchedUser = null;
+        let user = null;
+        let userFound = false;
+        let match = [];
         while (true) {
-            var currentDistance = 0;
-            if (users[currentIndex].match.status == "confirmed" || users[index].match.status == "confirmed") {
-                currentIndex += 2; //Find match for user after next
-                index += 2; //Find match for user after current
-            } else {
+            let currentDistance = 0;
+            if(!users[index]) break;
+            if (users[index]._id == userID && !userFound) {
+                user = users[index];
+                index = 0;
+                endLoop = 0;
+                userFound = true;
+                console.log("Found user " + users[index].name);
+
+            } else if (users[index]._id != user._id && users[index].match.status != "confirmed") {
                 for (let i = 0; i < users[index].char.length; i++) {
-                    for (let like in users[index].char[i]) currentDistance += Math.abs(users[currentIndex].pref[i][like] - users[index].char[i][like]);// //COMPUTES DISTANCE 
+                    for (let like in users[index].char[i]) {
+                        let distance = Math.abs(user.pref[i][like] - users[index].char[i][like]);//COMPUTES DISTANCE 
+                        if (distance > 0) currentDistance++
+                    }
                 }
                 if (currentDistance < storedDistance) {
                     if (!users[index].match.status || users[index].match.status == "tentative") {
                         storedDistance = currentDistance;
-                        users[currentIndex].match.id = users[index]._id;
-                        users[currentIndex].match.status = true;
+                        user.match.id = users[index]._id;
+                        user.match.status = true;
                         users[index].match.status = true;
-                        console.log(`${users[currentIndex].name} matched with ${users[index].name}`);
+                        console.log(`${user.name} matched with ${users[index].name}`);
+                        match = [user, users[index]];
                         index++;
+
                     } else {
-                        users[currentIndex].match.id = users[index]._id;
-                        users[currentIndex].match.status = "tentative";
+                        user.match.id = users[index]._id;
+                        user.match.status = "tentative";
                         index++; //Move to the next user
                     }
                 } else {
                     index++; //Move to the next user
                 }
-            }
-            if (index == users.length) {
-                //save matches to a file fs.writeFile(file, data[, options], callback)
-                let path = "../graphs/" + `${moment().format('YYYYMMDDHHmmss')}.graph`.toString();
-                fs.writeFile(path, JSON.stringify(users), (err) => {
-                    if (err) console.log(err); //throw
-                    console.log("New graph file created");
-                    
-                    /*fs.readFile(path, 'utf8', (err, data) => {
-                        console.log(JSON.parse(data)[1].name);
-                    });/
-                    
-                });
-                console.log("Finished");
-                break;
+            } else {
+                index++
             }
         }
-    });*/
+        return match;
+    })
+}
+
+let matchAlgorithm = {
+    "generateMatchGraph": generateMatchGraph,
+    "findBestMatch":findBestMatch
 }
 //generateMatchGraph();
-//findBestMatch(userID,filter)
+//findBestMatch("5aeaae13e5f3594770cd6e4e", {})
 
 
 
-module.exports = { generateMatchGraph: generateMatchGraph };
+module.exports = matchAlgorithm;
