@@ -14,7 +14,9 @@ function databaseConnection() {
 //O(N^2)
 
 function generateMatchGraph(userID) {
+    let user_id = "5ae9343bdd95e81fa433a84f";
     let db = databaseConnection();
+    let user;
     User.findById(userID,(err, user)=>{
         
     });

@@ -12,23 +12,22 @@
 </head>
 
 <body id="register">
+	<img class="ui fluid .banner-image image" src="/imgs/roomatehead.jpg">
+	<div class="ui fixed text menu">
+		<div class="ui left  item">
+			<a class="ui red icon button" href="/home">
+				<i class="home icon"></i>Home
+			</a>
 
-	<img class="ui fluid .banner-image image" src="/imgs/roomatehead.jpg" >
-<div class="ui fixed text menu">
-	<div class="ui left  item">
-		<a class="ui red icon button" href="/home">
-			<i class="home icon"></i>Home
-		</a>
-	
-	</div>
-	<div class="ui right  item">
-		<a class="ui red icon button" href="/login">
-			<i class="sign out alternate icon"></i>Sign in
-		</a>
-	</div>
+		</div>
+		<div class="ui right  item">
+			<a class="ui red icon button" href="/login">
+				<i class="sign out alternate icon"></i>Sign in
+			</a>
+		</div>
 
-	
-</div>
+
+	</div>
 
 	<div>
 		<div class="ui fluid red pointing three item secondary container menu">
@@ -75,9 +74,19 @@
 								<input type="text" name="contact[phone]" placeholder="eg. 876-123-4567">
 							</div>
 						</div>
-						<div class="thirteen wide field">
-							<label>Address</label>
-							<input type="text" name="address" placeholder="eg. Lot 32B manatee close, manley meadows, kingston 2">
+						<div class="eight wide field">
+							<label>Hall Residence</label>
+							<div class="ui selection dropdown">
+								<input type="hidden" name="hall">
+								<div class="default text">Hall Residence</div>
+								<i class="dropdown icon"></i>
+								<div class="menu">
+									<div class="item" data-value="A">Hall A</div>
+									<div class="item" data-value="B">Hall B</div>
+									<div class="item" data-value="E">Hall E</div>
+									<div class="item" data-value="F">Hall F</div>
+								</div>
+							</div>
 						</div>
 						<div class="two fields">
 							<div class="four wide field">
@@ -90,7 +99,7 @@
 							</div>
 						</div>
 
-						<div class="four wide field">
+						<div class="eight wide field">
 							<label>Personality</label>
 							<div class="ui selection dropdown">
 								<input type="hidden" name="personality">
@@ -114,11 +123,15 @@
 									<div class="item" data-value="Entrepeneur">Entrepeneur</div>
 									<div class="item" data-value="Entertainer">Entertainer</div>
 								</div>
+
+							</div>
+							<div class="field">
+								<div class="ui button" data-content="Do personality here">TAKE TEST </div>
 							</div>
 						</div>
+						<div class="ui divider"></div>
+						<div class="ui inverted red characteristics button">NEXT</div>
 					</div>
-					<div class="ui divider"></div>
-					<div class="ui inverted red characteristics button">NEXT</div>
 				</div>
 
 				<div class="ui characteristics tab" data-tab="characteristics">
@@ -1002,7 +1015,7 @@
 						<label>I agree to the Terms and Conditions</label>
 					</div>
 				</div>-->
-					<div class="ui error message"></div>
+					<div class="ui hidden error message"></div>
 				</div>
 				<div class="actions">
 					<div class="ui cancel back button" data-tab="characteristics">Back</div>

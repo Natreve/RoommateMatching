@@ -215,7 +215,7 @@ body, html {
   }
   .banner-image {
     background-image: url('/imgs/roomates.jpg');
-    height: 80%;
+    height: 75%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
