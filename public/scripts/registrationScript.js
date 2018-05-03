@@ -1,11 +1,13 @@
 $(function () {
     $('.dropdown').dropdown();
     $('.ui.checkbox').checkbox();
+
     $('.personal.tab').transition({
         animation: 'fade in',
         duration: '1s',
         interval: '5m',
         onComplete: function () {
+            $('.personal.tab').addClass("active");
         }
     });
 

@@ -1,59 +1,75 @@
 
 const mongoose = require('mongoose');
+const moment = require('moment');
+var fs = require('fs');
 const User = require('../modules/user');
+const rootFolder = require('../rootFolder');
 
 function databaseConnection() {
     mongoose.connect('mongodb://adminAndrew:password@ds263089.mlab.com:63089/majorproject');
     let db = mongoose.connection;
     //Check for database connection
-    db.once('open', () => console.log(`Connected to ${dbName} Database`));
+    db.once('open', () => console.log(`Connected to Database`));
     //Check for database errors
     db.on('error', (err) => console.log(err));
     return db;
 }
 //O(N^2)
 
-function generateMatchGraph(userID) {
-    let user_id = "5ae9343bdd95e81fa433a84f";
+function generateMatchGraph(filter) {
     let db = databaseConnection();
-    let user;
-    User.findById(userID,(err, user)=>{
-        
-    });
-}
+    //Filter by personality if no filter match enter database memebers
+    User.find(filter || {}, (err, users) => {
+        db.close()
+        if (!users.length || users.length < 2) return false;
 
-
-function findMatch(matchUser, users) {
-    //var currentDistance = 0;
-    var storedDistance = 999;
-    if (users.length > 2) {
-        for (let i = 0; i < users.length; i++) {//LOOPS THROUGH EACH USER IN THE FILE
-            if (users[i]._id != matchUser._id) {
-                var currentDistance = 0; // INITIALISE/RESET USERS AVERAGE DISTANCE to 0 
-                for (let like in users[i].char) currentDistance += Math.abs(matchUser.pref[like] - users[i].char[like]); //COMPUTES THE AVERAGE DISTANCE 
+        let storedDistance = 999;
+        let index = 1;
+        let currentIndex = 0;
+        let storedMatchedUser = null;
+        while (true) {
+            var currentDistance = 0;
+            if (users[currentIndex].match.status == "confirmed" || users[index].match.status == "confirmed") {
+                currentIndex += 2; //Find match for user after next
+                index += 2; //Find match for user after current
+            } else {
+                for (let i = 0; i < users[index].char.length; i++) {
+                    for (let like in users[index].char[i]) currentDistance += Math.abs(users[currentIndex].pref[i][like] - users[index].char[i][like]);// //COMPUTES DISTANCE 
+                }
                 if (currentDistance < storedDistance) {
-                    if (matchUser.match.status)
-                        //UPDATE STORED MATCH DISTANCE
+                    if (!users[index].match.status || users[index].match.status == "tentative") {
                         storedDistance = currentDistance;
-                    //LINK MATCHED USERS
-                    matchUser.match.id = users[i]._id;
-                    users[i].match.id = matchUser._id;
-                    //SET MATCH STATUS TO TENTITIVE
-                    matchUser.match.status = "tentative";
-                    users[i].match.status = "tentative";
+                        users[currentIndex].match.id = users[index]._id;
+                        users[currentIndex].match.status = true;
+                        users[index].match.status = true;
+                        console.log(`${users[currentIndex].name} matched with ${users[index].name}`);
+                        index++;
+                    } else {
+                        users[currentIndex].match.id = users[index]._id;
+                        users[currentIndex].match.status = "tentative";
+                        index++; //Move to the next user
+                    }
+                } else {
+                    index++; //Move to the next user
                 }
             }
+            if (index == users.length) {
+                //save matches to a file fs.writeFile(file, data[, options], callback)
+                let path = "../graphs/" + `${moment().format('YYYYMMDDHHmmss')}.graph`.toString();
+                fs.writeFile(path, JSON.stringify(users), (err) => {
+                    if (err) console.log(err); //throw
+                    console.log("New graph file created");
+                });
+                console.log("Finished");
+                break;
+            }
+
         }
-        return matchUser;
-    } else {
-        users[0].match.id = users[1]._id;
-        users[1].match.id = users[0]._id;
-
-        return users;
-    }
-
+    });
 }
+generateMatchGraph();
 
 
 
-module.exports = { findMatch: findMatch };
+
+module.exports = { generateMatchGraph: generateMatchGraph };
