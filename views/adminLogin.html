@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.css">
+    <link rel="stylesheet" href="/styles/stylesheet.css">
+</head>
+
+<body>
+    <form class="ui admin login form">
+        <div class="ui raised very padded text container">
+
+            <div class="ui segment">
+                <div class="ui top left attached label">Admin Login</div>
+                <div class="eight wide field">
+                    <div class="ui left icon input">
+                        <i class="user icon"></i>
+                        <input name="name" placeholder="username" type="text">
+                    </div>
+                </div>
+                <div class="eight wide field">
+                    <div class="ui left icon input">
+                        <i class="lock icon"></i>
+                        <input name="password" placeholder="password" type="password">
+                    </div>
+                </div>
+                <button class="ui large red submit button" type="submit">Login</button>
+                <div class="ui error message"></div>
+                <div class="ui compact hidden negative message">
+                    <p>Incorrect email or password</p>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.1/dist/semantic.min.js"></script>
+<script src="/scripts/adminScript.js"></script>
+
+</html>
