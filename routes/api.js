@@ -18,7 +18,7 @@ function databaseConnection() {
 // API - Returns all users
 
 router.get('/users', (req, res) => {
-    if (req.session.user) {
+    if (req.session.admin) {
         databaseConnection();
         User.find({}, (err, users) => {
             res.send(users);
@@ -28,7 +28,7 @@ router.get('/users', (req, res) => {
     }
 }); // API - Returns all users
 router.get('/users/:id', (req, res) => {
-    if (req.session.user) {
+    if (req.session.admin) {
         databaseConnection()
         User.findById(req.params.id, (err, user) => { // API - Return user based on ID
             if (err) res.status(400).send("Invalid user ID")
@@ -40,7 +40,7 @@ router.get('/users/:id', (req, res) => {
 
 });
 router.get('/users/filterBySex/:sex', (req, res) => {
-    if (req.session.user) {
+    if (req.session.admin) {
         databaseConnection()
         User.find({ sex: req.params.sex }, (err, user) => { // API - Return users based on sex
             if (err) res.status(400).send("Invalid sex")
@@ -52,7 +52,7 @@ router.get('/users/filterBySex/:sex', (req, res) => {
 });
 
 router.get('/users/filterByMatch/:match', (req, res) => {
-    if (req.session.user) {
+    if (req.session.admin) {
         databaseConnection()
         User.find({ "match.status": req.params.match }, (err, users) => { // API - Return users based on if they alreay have a match or not
             if (err) res.status(400).send("Invalid, most be true or false value")
@@ -64,7 +64,7 @@ router.get('/users/filterByMatch/:match', (req, res) => {
 });
 
 router.get('/users/filterByPersonality/:personality', (req, res) => {
-    if (req.session.user) {
+    if (req.session.admin) {
         databaseConnection()
         User.find({ personality: req.params.personality }, (err, users) => { // API - Return users based on if they alreay have a match or not
             if (err) res.status(400).send("Invalid, this personality is not an option")
@@ -76,7 +76,7 @@ router.get('/users/filterByPersonality/:personality', (req, res) => {
 });
 
 router.get('/users/findBestMatch/:id', (req, res) => {
-    if (req.session.user) {
+    if (req.session.admin) {
         databaseConnection()
         User.findById(req.params.id, (err, user) => { // API - Return user based on ID
             if (err) res.status(400).send("Invalid user ID")
@@ -90,7 +90,7 @@ router.get('/users/findBestMatch/:id', (req, res) => {
 });
 
 router.get('/users/delete/:id', (req, res) => { //API - Delete user based on ID
-    if (req.session.user) {
+    if (req.session.admin) {
         databaseConnection()
         User.remove({ _id: req.params.id }, (err) => {
             if (err) res.status(400).send("Invalid usr ID")
@@ -103,7 +103,7 @@ router.get('/users/delete/:id', (req, res) => { //API - Delete user based on ID
 
 router.post('/users/update/:id', (req, res) => User.findById(req.params.id, (err, user) => {
     //let user = new User();
-    if (req.session.user) {
+    if (req.session.admin) {
     } else {
         res.status(401).send("Unauthorized");
     }

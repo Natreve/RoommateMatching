@@ -41,7 +41,6 @@ router.post('/login', (req, res) => {
         }
     })
 });
-
 router.get('/profile', (req, res) => {
     if (req.session.user) res.sendFile(rootFolder.rootFolder + '/views/profile.html');
     else res.status(401).sendFile(rootFolder.rootFolder + '/views/login.html');
