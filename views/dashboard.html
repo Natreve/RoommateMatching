@@ -11,65 +11,149 @@
 </head>
 
 <body>
-    <div class="ui secondary  menu">
-        <a class="active item">
-            Home
+    <div class="ui red inverted flat menu">
+        <a class="icon settings item">
+            <i class="cogs large icon"></i>
         </a>
-        <a class="item">
-            Messages
+        <a class="icon generate item">
+            <i class="sync icon"></i> Generate Match
         </a>
-        <a class="item">
-            Friends
+        <a class="icon records item">
+            <i class="history icon"></i> Match Records
         </a>
         <div class="right menu">
-            <div class="item">
-                <div class="ui icon input">
-                    <input type="text" placeholder="Search...">
-                    <i class="search link icon"></i>
-                </div>
-            </div>
             <a class="ui item">
                 Logout
             </a>
         </div>
     </div>
-    <div class="ui container">
-        <table class="ui basic collapsing campact celled table">
-            <thead>
-                <tr>
-                    <th>
-                        <h1 class="ui header">Matches</h1>
-                    </th>
-                    <th>
-                        <h1 class="ui header">Tentitive Match</h1>
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <div class="ui huge labels">
-                            <a class="ui basic yellow image label">
-                                <img src="https://semantic-ui.com/images/avatar2/small/lena.png"> Danique Hayden
-                            </a>
-                            <a class="ui basic green image label">
-                                <img src="https://semantic-ui.com/images/avatar2/small/lindsay.png"> Suzette Medwynter
-                            </a>
-                        </div>
-                    </td>
-                    <td>
-                        <a class="ui basic yellow huge image label">
-                            <img src="https://semantic-ui.com/images/avatar2/small/matthew.png"> Andrew Gray
-                        </a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+    <div class="ui container raised segment">
+        <h4 class="ui horizontal divider green header">
+            <i class="bar chart icon"></i>
+            Best Fit Matches
+        </h4>
+
+        <div class="ui warning message">
+            <div class="header">
+                There doesn't seem to be any matches
+            </div>
+            Please click the generate match button to generate. Note, that you can filter matches from the settings section.
+        </div>
+        <!--<table class="ui basic collapsing campact celled table">
+                    <thead>
+                        <tr>
+                            <th>
+                                <h1 class="ui header">Matches</h1>
+                            </th>
+                            <th>
+                                <h1 class="ui header">Tentitive Match</h1>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="ui huge labels">
+                                    <a class="ui basic yellow image label">
+                                        <img src="https://semantic-ui.com/images/avatar2/small/lena.png"> Danique Hayden
+                                    </a>
+                                    <a class="ui basic green image label">
+                                        <img src="https://semantic-ui.com/images/avatar2/small/lindsay.png"> Suzette Medwynter
+                                    </a>
+                                </div>
+                            </td>
+                            <td>
+                                <a class="ui basic yellow huge image label">
+                                    <img src="https://semantic-ui.com/images/avatar2/small/matthew.png"> Andrew Gray
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>-->
     </div>
+    <div class="ui tiny settings modal">
+        <div class="header">Settings</div>
+        <div class="content">
+            <div class="description">
+                <div class="ui form">
+                    <div class="inline fields">
+                        <label>Name</label>
+                        <div class="ui loading fluid search selection dropdown" id="userList">
+                            <input type="hidden" name="user">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">Select user</div>
+                            <div class="menu">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inline field">
+                        <label>Sex</label>
+                        <div class="ui checkbox">
+                            <input type="checkbox" class="hidden" name="male" id="male">
+                            <label>Male</label>
+                        </div>
+                        <div class="ui checkbox">
+                            <input type="checkbox" class="hidden" name="female" id="female">
+                            <label>female</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>Hall Residence</label>
+                        <div class="ui multiple search selection dropdown">
+                            <input type="hidden" name="hall" id="hall">
+                            <div class="default text">Hall Residence</div>
+                            <i class="dropdown icon"></i>
+                            <div class="menu">
+                                <div class="item" data-value="A">Hall A</div>
+                                <div class="item" data-value="B">Hall B</div>
+                                <div class="item" data-value="E">Hall E</div>
+                                <div class="item" data-value="F">Hall F</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inline field">
+                        <div class="field">
+                            <label>Personality</label>
+                            <div class="ui mulitiple search selection dropdown">
+                                <input type="hidden" name="personality" id="personality">
+                                <div class="default text">Personality</div>
+                                <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <div class="item" data-value="INTJ">Architect</div>
+                                    <div class="item" data-value="INTP">Logician</div>
+                                    <div class="item" data-value="ENTJ">Commander</div>
+                                    <div class="item" data-value="ENTP">Debater</div>
+                                    <div class="item" data-value="INFJ">Advocate</div>
+                                    <div class="item" data-value="INFP">Mediator</div>
+                                    <div class="item" data-value="ENFJ">Protagonist</div>
+                                    <div class="item" data-value="ENFP">Campaigner</div>
+                                    <div class="item" data-value="ISTJ">Logistician</div>
+                                    <div class="item" data-value="ISFJ">Defender</div>
+                                    <div class="item" data-value="ESTJ">Executive</div>
+                                    <div class="item" data-value="ESFJ">Consul</div>
+                                    <div class="item" data-value="ISTP">Virtuoso</div>
+                                    <div class="item" data-value="ISFP">Adventurer</div>
+                                    <div class="item" data-value="ESTP">Entrepeneur</div>
+                                    <div class="item" data-value="ESFP">Entertainer</div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="actions">
+            <div class="ui approve button">Save</div>
+            <div class="ui cancel button">Cancel</div>
+        </div>
+    </div>
+    </div>
+
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.1/dist/semantic.min.js"></script>
-<script src="/scripts/main.js"></script>
+<script src="/scripts/adminScript.js"></script>
 
 
 </html>

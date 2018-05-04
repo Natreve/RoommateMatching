@@ -1,4 +1,11 @@
 $(function () {
+    $('.settings.item').click(function () {
+        $('.ui.settings.modal').modal('show');
+    })
+    $('.ui.dropdown').dropdown({
+        forceSelection: false
+    });
+    $('.ui.checkbox').checkbox();
     $('.ui.form').form({
         fields: {
             email: 'email',
@@ -25,4 +32,44 @@ $(function () {
             return false;
         }
     })
+    let fetchUsers = function () {
+        console.log("fetch users")
+        $('#userList').addClass("loading");
+        return new Promise(function (resolve, reject) {
+            $.ajax({
+                type: 'GET',
+                url: "api/users/",
+                data: {},
+                success: function (response) {
+                    resolve(response)
+                },
+                failure: function (errMsg) {
+                    console.log(errMsg);
+                }
+            });
+        });
+    };
+    //TO BE DONE
+    let match = function () {
+        var settings = {
+        
+        };
+    }
+    $('.generate.item').click(function () {
+        match();
+    });
+    let renderUsers = function (userList) {
+        for (var i = 0; i < userList.length; i++) {
+            if (userList[i].sex == "male") {
+                $('#userList .menu').append(`<div class="item" data-value="${userList[i]._id}"><i class="mars icon"></i>${userList[i].name}</div>`);
+            } else {
+                $('#userList .menu').append(`<div class="item" data-value="${userList[i]._id}"><i class="venus icon"></i>${userList[i].name}</div>`);
+            }
+        }
+        $('#userList').removeClass("loading");
+    }
+    fetchUsers().then((response) => {
+        renderUsers(response);
+    });
+
 });
