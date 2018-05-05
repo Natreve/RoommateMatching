@@ -7,7 +7,7 @@ body, html {
   }
   .banner-image {
     background-image: url('/imgs/roomates.jpg');
-    height: 75%;
+    height: 60%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -37,8 +37,8 @@ body, html {
   .ui.message.flat {
     position: relative;
     min-height: 1em;
-    width: 60%;
-    margin: 1em 0em 3em;
+    width: 100%;
+    margin: 1em 0em 1em;
     background-color: red;
       opacity: 0.85;
     padding: 1em 1em;
@@ -70,7 +70,7 @@ body, html {
     position: relative;
     min-height: 1em;
     width: 100%;
-    margin: 3em 0em 1em;
+    margin: 4% 0% 3%;
     background-color: red;
       opacity: 0.85;
     padding: .75em;
@@ -83,7 +83,7 @@ body, html {
   }
   .banner-image {
     background-image: url('/imgs/roomates.jpg');
-    height: 55%;
+    height: 52%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -97,7 +97,7 @@ body, html {
     position: relative;
     min-height: 1em;
     width: 95%;
-    margin: 1% 0% 4%;
+    margin: 4% 0% 6%;
     background-color: red;
       opacity: 0.85;
     padding: .75em;
@@ -127,7 +127,7 @@ body, html {
   .ui.message.flat {
     position: relative;
     min-height: 1em;
-    width: 60%;
+    width: 100%;
     margin: 1% 0% 2%;
     background-color: red;
       opacity: 0.85;
@@ -141,7 +141,7 @@ body, html {
   }
   .banner-image {
     background-image: url('/imgs/roomates.jpg');
-    height: 90%;
+    height: 50%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
