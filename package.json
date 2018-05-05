@@ -1,5 +1,5 @@
 {
-  "name": "Project",
+  "name": "project",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,7 @@
     "index.js": "0.0.3",
     "moment": "^2.22.1",
     "mongodb": "^3.0.7",
-    "mongoose": "^5.0.16",
+    "mongoose": "^5.0.17",
     "mpm": "0.0.1",
     "npm": "^6.0.0"
   },
