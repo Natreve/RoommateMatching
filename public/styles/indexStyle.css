@@ -70,7 +70,7 @@ body, html {
     position: relative;
     min-height: 1em;
     width: 100%;
-    margin: 4% 0% 3%;
+    margin: 2% 0% 3%;
     background-color: red;
       opacity: 0.85;
     padding: .75em;
@@ -83,7 +83,7 @@ body, html {
   }
   .banner-image {
     background-image: url('/imgs/roomates.jpg');
-    height: 52%;
+    height: 58%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -96,8 +96,8 @@ body, html {
   .ui.message.flat {
     position: relative;
     min-height: 1em;
-    width: 95%;
-    margin: 4% 0% 6%;
+    width: 100%;
+    margin: 3% 0% 10%;
     background-color: red;
       opacity: 0.85;
     padding: .75em;
