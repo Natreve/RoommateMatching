@@ -15,12 +15,19 @@
         <a class="icon settings item">
             <i class="cogs large icon"></i>
         </a>
-        <a class="icon generate item">
+        <!--<a class="icon generate item">
             <i class="sync icon"></i> Generate Match
-        </a>
-        <a class="icon records item">
-            <i class="history icon"></i> Match Records
-        </a>
+        </a>-->
+        <div class="item">
+            <div class="ui red generate button" id="generateBtn">
+                <i class="sync  icon" id="generateIcon"></i> Generate Match
+            </div>
+        </div>
+        <div class="item">
+            <div class="ui red records button">
+                <i class="history  icon"></i> Match Records
+            </div>
+        </div>
         <div class="right menu">
             <a class="ui item">
                 Logout
@@ -32,44 +39,14 @@
             <i class="bar chart icon"></i>
             Best Fit Matches
         </h4>
-
-        <div class="ui warning message">
+        <div id="matchTable"></div>
+        <div class="ui warning message" id="matchMessage">
             <div class="header">
                 There doesn't seem to be any matches
             </div>
             Please click the generate match button to generate. Note, that you can filter matches from the settings section.
         </div>
-        <!--<table class="ui basic collapsing campact celled table">
-                    <thead>
-                        <tr>
-                            <th>
-                                <h1 class="ui header">Matches</h1>
-                            </th>
-                            <th>
-                                <h1 class="ui header">Tentitive Match</h1>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <div class="ui huge labels">
-                                    <a class="ui basic yellow image label">
-                                        <img src="https://semantic-ui.com/images/avatar2/small/lena.png"> Danique Hayden
-                                    </a>
-                                    <a class="ui basic green image label">
-                                        <img src="https://semantic-ui.com/images/avatar2/small/lindsay.png"> Suzette Medwynter
-                                    </a>
-                                </div>
-                            </td>
-                            <td>
-                                <a class="ui basic yellow huge image label">
-                                    <img src="https://semantic-ui.com/images/avatar2/small/matthew.png"> Andrew Gray
-                                </a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>-->
+        <!---->
     </div>
     <div class="ui tiny settings modal">
         <div class="header">Settings</div>
@@ -77,22 +54,27 @@
             <div class="description">
                 <div class="ui form">
                     <div class="inline fields">
+
                         <label>Name</label>
-                        <div class="ui loading fluid search selection dropdown" id="userList">
-                            <input type="hidden" name="user">
+                        <div class="ui selection user dropdown" id="userList">
+                            <input type="hidden" name="user" id="user">
                             <i class="dropdown icon"></i>
-                            <div class="default text">Select user</div>
+                            <i class="remove icon"></i>
+                            <div class="default text">Load users to select</div>
                             <div class="menu">
                             </div>
+                        </div>
+                        <div class="ui red icon button" id="loadUsers">
+                            <i class="sync icon"></i>
                         </div>
                     </div>
                     <div class="inline field">
                         <label>Sex</label>
-                        <div class="ui checkbox">
+                        <div class="ui sex male checkbox">
                             <input type="checkbox" class="hidden" name="male" id="male">
                             <label>Male</label>
                         </div>
-                        <div class="ui checkbox">
+                        <div class="ui sex female checkbox">
                             <input type="checkbox" class="hidden" name="female" id="female">
                             <label>female</label>
                         </div>
@@ -114,10 +96,12 @@
                     <div class="inline field">
                         <div class="field">
                             <label>Personality</label>
-                            <div class="ui mulitiple search selection dropdown">
+                            <div class="ui mulitiple selection personality dropdown" id="personalityList">
                                 <input type="hidden" name="personality" id="personality">
                                 <div class="default text">Personality</div>
                                 <i class="dropdown icon"></i>
+
+                                <i class="remove icon"></i>
                                 <div class="menu">
                                     <div class="item" data-value="INTJ">Architect</div>
                                     <div class="item" data-value="INTP">Logician</div>

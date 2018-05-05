@@ -17,6 +17,22 @@ body, html {
   min-height: 2.85714286em;
   
 }
+.ui.dropdown .remove.icon {
+  font-size: 0.857143em;
+  float:left; 
+  margin:0;
+  padding:0;
+  left:-0.7em;
+  top:0;
+  position:relative;
+  opacity: 0.5;
+}
+
+.ui.dropdown input[value=''] ~ .remove.icon, .ui.dropdown input:not([value]) ~ .remove.icon
+{
+   opacity: 0.0;
+}
+
 .solid {
   background: #FFFFFF!important;
 }
