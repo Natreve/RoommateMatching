@@ -11,13 +11,58 @@
 </head>
 
 <body>
+    <img class="ui fluid image" src="imgs/roomatehead.jpg" style="box-shadow: 0 0 0 3px red;">
+    <div class="ui fluid red pointing four item secondary container menu">
+        <a class="active profile item" data-tab="profile">Profile</a>
+        <a class="contact item disabled" data-tab="contact">Contact Detail</a>
+        <a class="roomate item disabled" data-tab="roomate">Roommates</a>
+        <a href="/logout" class="signout item" data-tab="roomate">Sign out</a>
+    </div>
+    <form class="ui  profile form">
     <div class="ui container">
-        <h1 class="large dividing header">Profile page...</h1>
-        <a class="ui huge red circular icon button" href="/logout">
-            <i class="sign out alternate icon"></i>Sign out
-        </a>
+    <div class="ui profile tab" data-tab="profile">
+            <div class="two fields">
+                <div class="field">
+                    <img src="" style="border-radius: 500px 500px;box-shadow: 0px 0px 0px 4px red;width:60%">
+                </div>
+    
+                <div clas="four fluid fields">
+                    <div class="field">
+                        <i class="pad">Name</i>
+                        <h5 class="pad hidden">John Brown</h5>
+                    </div>
+    
+                    <div class="ui divider"> </div>
+                    <div class="field">
+                        <i class="pad">Age</i>
+                        <h5 class="pad">23</h5>
+                    </div>
+    
+                    <div class="ui divider"> </div>
+                    <div class="field">
+                        <i class="pad">Personality Type</i>
+                        <h5 class="pad">Virtuoso</h5>
+                    </div>
+    
+                    <div class="ui divider"> </div>
+                    <div class="field">
+                        <i class="pad">Roommate</i>
+                        <h5 class="pad">David Green</h5>
+                    </div>
+    
+                </div>
+            </div>
     </div>
 
+    <div class="ui contact tab" data-tab="contact">
+
+    </div>
+
+    <div class="ui roomate tab" data-tab="roomate">
+    
+    </div>
+</div>
+</form>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.1/dist/semantic.min.js"></script>
