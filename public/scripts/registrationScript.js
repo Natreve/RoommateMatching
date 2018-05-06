@@ -256,11 +256,13 @@ $(function () {
                 url: 'register?' + $("form").serialize(),
                 success: function (response) {
                     if (response) window.location = '/login'
+                    else if(!response || response == "false") $('.error.message').removeClass("hidden").html("User already on record")
                     else {
                         $('.error.message').removeClass("hidden").html("There was a server error")
                     }
                 },
                 failure: function (errMsg) {
+                    $('.error.message').removeClass("hidden").html("User on record")
                     console.log(errMsg);
                 }
             });
