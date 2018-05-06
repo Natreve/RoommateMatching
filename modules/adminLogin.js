@@ -88,6 +88,25 @@ router.get('/genMatch/:settings', (req, res) => {
         res.status(401).send("Unauthorized");
     }
 });
+router.get('/fetchGraphs', (req, res)=>{
+    if (req.session.admin) {
+        match.fetchFiles((data)=>{
+            res.status(200).send(data);
+        })
+    } else {
+        res.status(401).send("Unauthorized");
+    }
+});
+router.get('/fetchGraph/:file', (req, res)=>{
+    if (req.session.admin) {
+        let filter = JSON.parse(req.params.file);
+        match.fetchFile(file, (data)=>{
+            res.status(200).send(data);
+        })
+    } else {
+        res.status(401).send("Unauthorized");
+    }
+});
 router.get('/logout', (req, res) => {
     console.log('logout')
     req.session.destroy((err) => {

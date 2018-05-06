@@ -149,6 +149,7 @@ $(function () {
         if (count == 16) $('.ui.terms.modal').modal('setting', 'closable', false).modal('show');
     })
     $('.submit.button').on('click', function () {
+        $('.submit.button').addClass("loading")
         $('.ui.form').form("validate form")
     })
     $('.ui.form').form({

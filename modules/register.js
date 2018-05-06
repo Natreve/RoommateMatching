@@ -25,13 +25,14 @@ router.get('/register', (req, res) => {
 
 router.post('/register', (req, res) => {
     let db = databaseConnection();
-    let user = new User();
     var form = req.query;
     var email = form.contact.email;
+    console.log(form.name)
     User.findOne({ "email": email }, (err, user) => {
         if (err) res.status(500).send("Server error");
         else if (user) res.send(false);//.redirect('/login')
         else {
+            let user = new User();
             for (field in form) {
                 if (field == "contact") for (contact in form[field]) user[field][contact] = form[field][contact]//
                 else if (field == "pref") for (pref in form[field]) user[field].push(form[field]);//console.log(`${field} : ${pref} : ${form[field]}`) 

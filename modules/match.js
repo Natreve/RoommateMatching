@@ -253,6 +253,22 @@ function queryUserMatch(user, param, callback) {
         }
     });
 }
+function fetchFiles(callback) {
+    //fetch match files
+    fs.readdir("../graphs/",'utf8', (err,files)=>{
+        if(err) callback(false);
+        if(!files) callback(false);
+        else  callback(files);
+    });
+}
+function fetchFile(file, callback){
+    fs.readFile("../graphs/"+file, 'utf8',(err, data)=>{
+        if(err) callback(false);
+        if(!file) callback(false);
+        else callback(file);
+    })
+}
+
 function query(param) {
 
     User.find(param, (err, users) => {
@@ -314,6 +330,8 @@ function query(param) {
 }
 let matchAlgorithm = {
     "generateMatchGraph": generateMatchGraph,
-    "findBestMatch": findBestMatch
+    "findBestMatch": findBestMatch,
+    "fetchFiles": fetchFiles,
+    "fetchFile": fetchFile
 }
 module.exports = matchAlgorithm;

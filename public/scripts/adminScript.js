@@ -90,6 +90,39 @@ $(function () {
             timeout: 30000
         });
     }
+    let fetchMatchGraphs = function () {
+        $.ajax({
+            type: 'GET',
+            url: "admin/fetchGraphs/",
+            success: function (response) {
+                $('#recordsIcon').removeClass("loading");
+                $('#recordsBtn').removeClass("disabled");
+                renderMatchGraphResults(response);
+            },
+            failure: function (response) {
+                $('#recordsIcon').removeClass("loading");
+                $('#recordsBtn').removeClass("disabled");
+                console.log(errMsg)
+            }
+        });
+    }
+    let fetchMatchGraph = function (file) {
+        $.ajax({
+            type: 'GET',
+            url: "admin/fetchGraph/" + file,
+            success: function (response) {
+                $('#recordsIcon').removeClass("loading");
+                $('#recordsBtn').removeClass("disabled");
+                renderMatchGraphResults(response);
+            },
+            failure: function (response) {
+                $('#recordsIcon').removeClass("loading");
+                $('#recordsBtn').removeClass("disabled");
+                console.log(errMsg)
+            }
+        });
+    }
+
     let renderUsers = function (userList) {
         $('#userList .menu').html("");
         for (var i = 0; i < userList.length; i++) {
@@ -143,6 +176,20 @@ $(function () {
         `;
         $('#matchMessage').addClass("hidden")
         $('#matchTable').html(templete);
+    }
+    let renderMatchGraphs = function (matchGraphs) {
+        var files = []
+        for (let i = 0; i < matchGraphs.length; i++) {
+            $('.relaxed.divided.list').append(`
+                <div class="item">
+                    <i class="large file alternate outline middle aligned icon"></i>
+                    <div class="content">
+                        <a class="header">${matchGraphs[i]}</a>
+                    <!--<div class="description">Updated 10 mins ago</div>-->
+                </div>
+            `);
+        }
+
     }
     let match = function () {
         var male = $('.ui.male.checkbox').checkbox('is checked') ? "male" : false;
@@ -226,6 +273,13 @@ $(function () {
         $('.generate.button').addClass("disabled");
         let settings = match();
         generateBestMatch(settings);
+    });
+    $('.records.button').click(function () {
+        //get match list
+        $('.records.button .history.icon').removeClass("loading");
+        $('.records.button').removeClass("disabled");
+        console.log(errMsg)
+        fetchMatchGraphs();
     });
 
 });

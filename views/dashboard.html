@@ -24,8 +24,8 @@
             </div>
         </div>
         <div class="item">
-            <div class="ui red records button">
-                <i class="history icon"></i> Match Records
+            <div class="ui red records button" id="recordsBtn">
+                <i class="history icon" id="recordsIcon"></i> Match Records
             </div>
         </div>
         <div class="right menu">
@@ -39,14 +39,20 @@
             <i class="bar chart icon"></i>
             Best Fit Matches
         </h4>
-        <div id="matchTable"></div>
+        <!--No matches available message-->
         <div class="ui warning message" id="matchMessage">
             <div class="header">
                 There doesn't seem to be any matches
             </div>
             Please click the generate match button to generate. Note, that you can filter matches from the settings section.
         </div>
-        <!---->
+        <!--Show all matches in a table-->
+        <div id="matchTable"></div>
+        <div class="ui relaxed divided list">
+            
+        </div>
+
+
     </div>
     <div class="ui tiny settings modal">
         <div class="header">Settings</div>
