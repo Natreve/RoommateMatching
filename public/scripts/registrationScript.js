@@ -1,9 +1,24 @@
 $(function () {
     $('.dropdown').dropdown();
-    $('.ui.checkbox').checkbox();
+    $('.ui.checkbox').checkbox({
+        onChange: function (e) {
+            if (!$(this).parent("div").parent("div").parent("span").hasClass("Checked")) {
+                $(this).parent("div").parent("div").parent("span").addClass("Checked");
+                $($(this).parent("div").parent("div").parent("span")).find("input").each(function (index, el) {
+                    console.log($(el).attr("name"))
+                    $(this).parent("div").parent("div").removeClass("error");
+                });
+            } else {
+                $($(this).parent("div").parent("div").parent("span")).find("input").each(function (index, el) {
+                    console.log(el)
+                    $(this).parent("div").parent("div").removeClass("error");
+                });
+            }
+        }
+    });
     $('.ui.sticky').sticky({
-            context: '#register'
-        });
+        context: '#register'
+    });
     $('.personal.tab').transition({
         animation: 'fade in',
         duration: '1s',
@@ -37,6 +52,7 @@ $(function () {
         });
     })
     //VALIDATE SEGMENT BEFORE MOVING TO NEXT ONE
+
     $('.characteristics.button').on('click', function () {
         var valid = true;
         var personalSegment = [
@@ -51,13 +67,13 @@ $(function () {
             { 'name': 'personality', 'valid': $('.ui.form').form('is valid', 'personality') }
         ];
 
-        for (let i = 0; i < personalSegment.length; i++) {
+        /*for (let i = 0; i < personalSegment.length; i++) {
             if (!personalSegment[i].valid) {
                 console.log(personalSegment[i].name)
                 $('.ui.form').form('validate field', personalSegment[i].name);
                 valid = false;
             }
-        }
+        }*/
         console.log(valid)
         if (valid) {
             $('.personal.tab').transition({
@@ -81,28 +97,52 @@ $(function () {
         }
     });
     $('.preferences.button').on('click', function () {
-        $('.characteristics.tab').transition({
-            animation: 'fade out',
-            duration: '1s',
-            interval: '5m',
-            onComplete: function () {
-                $('.secondary.menu .item').removeClass('active');
-                $('.characteristics.tab').removeClass('active');
-                $(`.preferences.item`).removeClass('disabled');
-                $(`.preferences.item`).addClass('active');
-                $('.preferences.tab').transition({
-                    animation: 'fade in',
-                    duration: '1s',
-                    onComplete: function () {
-                        $.tab('change tab', 'preferences');
-                    }
-                })
+        var count = 0;;
+        $('.characteristics.tab .field').find("span").each(function (index) {
+            console.log($(this).attr("class"))
+            if ($(this).hasClass("Checked")) {
+                count++
+                $(this).children("div").removeClass("error")
+            } else {
+                $(this).children("div").addClass("error")
             }
-        })
 
+        });
+        if (count == 16) {
+            $('.characteristics.tab').transition({
+                animation: 'fade out',
+                duration: '1s',
+                interval: '5m',
+                onComplete: function () {
+                    $('.secondary.menu .item').removeClass('active');
+                    $('.characteristics.tab').removeClass('active');
+                    $(`.preferences.item`).removeClass('disabled');
+                    $(`.preferences.item`).addClass('active');
+                    $('.preferences.tab').transition({
+                        animation: 'fade in',
+                        duration: '1s',
+                        onComplete: function () {
+                            $.tab('change tab', 'preferences');
+                        }
+                    })
+                }
+            })
+        } else {
+            console.log("not valid")
+        }
     });
     $('.terms.button').on("click", function () {
-        $('.ui.terms.modal').modal('setting', 'closable', false).modal('show');
+        var count = 0;;
+        $('.preferences.tab .field').find("span").each(function (index) {
+            if ($(this).hasClass("Checked")) {
+                count++
+                $(this).children("div").removeClass("error")
+            } else {
+                $(this).children("div").addClass("error")
+            }
+
+        });
+        if (count == 16) $('.ui.terms.modal').modal('setting', 'closable', false).modal('show');
     })
     $('.submit.button').on('click', function () {
         $('.ui.form').form("validate form")
@@ -129,7 +169,6 @@ $(function () {
                 identifier: 'contact[phone]',
                 rules: [{ type: 'minLength[7]' }, { type: 'maxLength[13]' }]
             },
-
             address: {
                 identifier: 'address',
                 rules: [{ type: 'empty' }]
@@ -146,8 +185,68 @@ $(function () {
                 identifier: 'personality',
                 rules: [{ type: 'empty' }]
             },
-            terms: {
-                identifier: 'terms',
+            "char[peoplePerson]": {
+                identifier: 'char[peoplePerson]',
+                rules: [{ type: 'checked' }]
+            },
+            'char[visitorFrequency]': {
+                identifier: 'char[visitorFrequency]',
+                rules: [{ type: 'checked' }]
+            },
+            'char[visitorNotification]': {
+                identifier: 'char[visitorNotification]',
+                rules: [{ type: 'checked' }]
+            },
+            'char[romanticVisitor]': {
+                identifier: 'char[romanticVisitor]',
+                rules: [{ type: 'checked' }]
+            },
+            'char[videoCalling]': {
+                identifier: 'char[videoCalling]',
+                rules: [{ type: 'checked' }]
+            },
+            'char[roomOrganization]': {
+                identifier: 'char[roomOrganization]',
+                rules: [{ type: 'checked' }]
+            },
+            'char[cleanliness]': {
+                identifier: 'char[cleanliness]',
+                rules: [{ type: 'checked' }]
+            },
+            'char[chores]': {
+                identifier: 'char[chores]',
+                rules: [{ type: 'checked' }]
+            },
+            'char[privacy]': {
+                identifier: 'char[privacy]',
+                rules: [{ type: 'checked' }]
+            },
+            'char[activeTime]': {
+                identifier: 'char[activeTime]',
+                rules: [{ type: 'checked' }]
+            },
+            'char[lightOut]': {
+                identifier: 'char[lightOut]',
+                rules: [{ type: 'checked' }]
+            },
+            'char[music]': {
+                identifier: 'char[music]',
+                rules: [{ type: 'checked' }]
+            },
+            'char[studyEnvi]': {
+                identifier: 'char[studyEnvi]',
+                rules: [{ type: 'checked' }]
+            },
+            'char[studyLocation]': {
+                identifier: 'char[studyLocation]',
+                rules: [{ type: 'checked' }]
+            },
+            'char[expectation]': {
+                identifier: 'char[expectation]',
+                rules: [{ type: 'checked' }]
+            },
+            'char[borrowing]': {
+                identifier: 'char[borrowing]',
                 rules: [{ type: 'checked' }]
             }
         },

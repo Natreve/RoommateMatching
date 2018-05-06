@@ -154,7 +154,7 @@ function findBestMatch(filter, callback) {
     console.log(filter)
     //callback("Function works")
     User.findById(filter.id, (err, user) => {
-        if(err) console.log(err);
+        if (err) console.log(err);
         var personalities = {
             ISTJ: ["ESTJ", "ISTJ", "INTJ", "ISTP", "ESTP"],
             ESTJ: ["ISTJ", "ESFJ", "ISFJ", "ENTJ", "INTJ", "ISTP"],
@@ -195,10 +195,10 @@ function queryUserMatch(user, param, callback) {
     User.find(param, (err, users) => {
         //db.close()
         console.log(err)
-        if (!users.length || users.length < 2){
+        if (!users.length || users.length < 2) {
             callback(false);
             return false;
-        } 
+        }
 
         let storedDistance = 999;
         let index = 1;
@@ -299,13 +299,14 @@ function query(param) {
                 fs.writeFile(path, JSON.stringify(users), (err) => {
                     if (err) console.log(err); //throw
                     console.log("New graph file created");
-                    return storedMatchedUser;
+                    //return storedMatchedUser;
                     //fs.readFile(path, 'utf8', (err, data) => {
                     //console.log(JSON.parse(data)[1].name);
                     //});
 
                 });
                 console.log("Finished");
+                return storedMatchedUser;
                 break;
             }
         }
