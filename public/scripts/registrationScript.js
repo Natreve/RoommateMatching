@@ -30,6 +30,7 @@ $(function () {
 
     //BACK BUTTON
     $('.back.button').on('click', function () {
+        $(window).scrollTop(0)
         var prevtab = $(this).attr('data-tab');
         var currentTab = $(this).attr('data-current-tab');
         $(`.${currentTab}.tab`).transition({
@@ -54,6 +55,7 @@ $(function () {
     //VALIDATE SEGMENT BEFORE MOVING TO NEXT ONE
 
     $('.characteristics.button').on('click', function () {
+        $(window).scrollTop(0)
         var valid = true;
         var personalSegment = [
             { 'name': 'name', 'valid': $('.ui.form').form('is valid', 'name') },
@@ -66,14 +68,6 @@ $(function () {
             { 'name': 'password2', 'valid': $('.ui.form').form('is valid', 'password2') },
             { 'name': 'personality', 'valid': $('.ui.form').form('is valid', 'personality') }
         ];
-
-        /*for (let i = 0; i < personalSegment.length; i++) {
-            if (!personalSegment[i].valid) {
-                console.log(personalSegment[i].name)
-                $('.ui.form').form('validate field', personalSegment[i].name);
-                valid = false;
-            }
-        }*/
         console.log(valid)
         if (valid) {
             $('.personal.tab').transition({
@@ -97,6 +91,7 @@ $(function () {
         }
     });
     $('.preferences.button').on('click', function () {
+        $(window).scrollTop(0)
         var count = 0;;
         $('.characteristics.tab .field').find("span").each(function (index) {
             console.log($(this).attr("class"))
@@ -105,6 +100,7 @@ $(function () {
                 $(this).children("div").removeClass("error")
             } else {
                 $(this).children("div").addClass("error")
+
             }
 
         });
@@ -256,7 +252,7 @@ $(function () {
                 url: 'register?' + $("form").serialize(),
                 success: function (response) {
                     if (response) window.location = '/login'
-                    else if(!response || response == "false") $('.error.message').removeClass("hidden").html("User already on record")
+                    else if (!response || response == "false") $('.error.message').removeClass("hidden").html("User already on record")
                     else {
                         $('.error.message').removeClass("hidden").html("There was a server error")
                     }

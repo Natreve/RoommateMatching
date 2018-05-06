@@ -14,13 +14,11 @@
 <body id="register">
 
 	<!--<img class="ui fluid .banner-image image" src="/imgs/roomatehead.jpg">-->
-
-	<div class="ui red inverted mini borderless flat menu">
-		<div class="ui container">
-			<div class="ui left  item">
-				<a class="ui red icon button" href="/home">
-					<i class="home icon"></i>Home
-				</a>
+	<div class="ui red inverted borderless flat menu">
+		<div class="ui left  item">
+			<a class="ui red icon button" href="/home">
+				<i class="home icon"></i>Home
+			</a>
 
 			</div>
 			<div class="ui right  item">
@@ -142,6 +140,7 @@
 				<div class="ui characteristics tab" data-tab="characteristics">
 					<!--Characteristics-->
 					<div class="field">
+							<label id="instruction"> Instruction: Please answer ALL questions honestly in order to get your best matches</label><br>
 						<span class="grouped fields">
 							<label for="char[peoplePerson]">1.</label>
 							<div class="field">
@@ -385,7 +384,7 @@
 							<label for="char[privacy]">10.</label>
 							<div class="field">
 								<div class="ui radio checkbox">
-									<input name="char[visitorNotification]" tabindex="0" class="hidden" type="radio" value="1">
+									<input name="char[privacy]" tabindex="0" class="hidden" type="radio" value="1">
 									<label>I am a strong believer of respecting another’s privacy.</label>
 								</div>
 							</div>
@@ -568,6 +567,8 @@
 
 				<div class="ui preferences tab" data-tab="preferences">
 					<!--Preferences-->
+					<label id="instruction"> Instruction: Please answer ALL questions honestly in order to get your best matches</label>
+					<br/>
 					<div class="field">
 						<span class="grouped fields">
 							<label for="pref[peoplePerson]">1.</label>
