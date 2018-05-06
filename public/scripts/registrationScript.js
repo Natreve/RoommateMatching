@@ -68,6 +68,14 @@ $(function () {
             { 'name': 'password2', 'valid': $('.ui.form').form('is valid', 'password2') },
             { 'name': 'personality', 'valid': $('.ui.form').form('is valid', 'personality') }
         ];
+
+        for (let i = 0; i < personalSegment.length; i++) {
+            if (!personalSegment[i].valid) {
+                console.log(personalSegment[i].name)
+                $('.ui.form').form('validate field', personalSegment[i].name);
+                valid = false;
+            }
+        }
         console.log(valid)
         if (valid) {
             $('.personal.tab').transition({
