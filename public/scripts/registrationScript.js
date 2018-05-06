@@ -15,6 +15,7 @@ $(function () {
 
     //BACK BUTTON
     $('.back.button').on('click', function () {
+        $(window).scrollTop(0)
         var prevtab = $(this).attr('data-tab');
         var currentTab = $(this).attr('data-current-tab');
         $(`.${currentTab}.tab`).transition({
@@ -38,6 +39,7 @@ $(function () {
     })
     //VALIDATE SEGMENT BEFORE MOVING TO NEXT ONE
     $('.characteristics.button').on('click', function () {
+        $(window).scrollTop(0)
         var valid = true;
         var personalSegment = [
             { 'name': 'name', 'valid': $('.ui.form').form('is valid', 'name') },
@@ -81,6 +83,7 @@ $(function () {
         }
     });
     $('.preferences.button').on('click', function () {
+        $(window).scrollTop(0)
         $('.characteristics.tab').transition({
             animation: 'fade out',
             duration: '1s',
