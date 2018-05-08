@@ -97,7 +97,7 @@ $(function () {
             success: function (response) {
                 $('#recordsIcon').removeClass("loading");
                 $('#recordsBtn').removeClass("disabled");
-                renderMatchGraphResults(response);
+                renderGraphList(response);
             },
             failure: function (response) {
                 $('#recordsIcon').removeClass("loading");
@@ -107,13 +107,14 @@ $(function () {
         });
     }
     let fetchMatchGraph = function (file) {
+        console.log(file)
         $.ajax({
             type: 'GET',
             url: "admin/fetchGraph/" + file,
             success: function (response) {
                 $('#recordsIcon').removeClass("loading");
                 $('#recordsBtn').removeClass("disabled");
-                renderMatchGraphResults(response);
+                renderMatchResults(response);
             },
             failure: function (response) {
                 $('#recordsIcon').removeClass("loading");
@@ -140,56 +141,78 @@ $(function () {
         $('#loadUsers').removeClass("loading");
     }
     let renderMatchResults = function (matches) {
-        var match = JSON.parse(matches);
-        var templete = `
-        <table class="ui basic collapsing campact celled table">
-            <thead>
-                <tr>
-                    <th>
-                        <h1 class="ui header">Matches</h1>
-                    </th>
-                    <th>
-                        <h1 class="ui header">Tentitive Match</h1>
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <div class="ui huge labels">
-                            <a class="ui basic yellow image label">
-                                <img src="https://semantic-ui.com/images/avatar2/small/lena.png"> ${match[0].name}
+        let match = JSON.parse(matches);
+        let sexA = "https://semantic-ui.com/images/avatar2/small/lena.png";
+        let sexB = "https://semantic-ui.com/images/avatar2/small/matthew.png";
+        console.log(match)
+        $('#matchTable').html("");
+        if (match.length == 2) {
+            if (match[0].sex != "female") {
+                sexA = "https://semantic-ui.com/images/avatar2/small/matthew.png"
+            }
+            if (match[1].sex != "male") {
+                sexB = "https://semantic-ui.com/images/avatar2/small/lena.png"
+            }
+            $('#matchTable').append(`
+                    <tr>
+                        <td>
+                            <a class="ui huge basic yellow image label">
+                                <img src="${sexA}"> ${match[0].name}
+                             </a>
+                        </td>
+                        <td>    
+                            <a class="ui huge basic green image label">
+                                <img src="${sexB}"> ${match[1].name}
                             </a>
-                            <a class="ui basic green image label">
-                            <img src="https://semantic-ui.com/images/avatar2/small/matthew.png"> ${match[1].name}
-                            </a>
-                        </div>
-                    </td>
-                    <!--<td>
-                        <a class="ui basic yellow huge image label">
-                        <img src="https://semantic-ui.com/images/avatar2/small/lindsay.png"> Andrew Gray
-                        </a>
-                    </td>-->
-                </tr>
-            </tbody>
-        </table>
-        `;
-        $('#matchMessage').addClass("hidden")
-        $('#matchTable').html(templete);
+                        </td>
+                        <td>    
+                        <button class="ui green button">Confirm</button>
+                        <button class="circular green ui button">
+                            <i class="envelope outline icon"></i>
+                        </button>
+                        </td>
+                    </tr>
+                `);
+            $('#matchMessage').addClass("hidden")
+        } else if (match) {
+            console.log(match[0])
+            $('#matchTable').html("");
+            $('#matchTable').append(`
+                    <tr>
+                        <td>
+                            <div class="ui huge labels">
+                                <a class="ui basic yellow image label">
+                                    <img src="https://semantic-ui.com/images/avatar2/small/lena.png"> ${match[0][0].name}
+                                </a>
+                                <a class="ui basic green image label">
+                                    <img src="https://semantic-ui.com/images/avatar2/small/matthew.png"> ${match[0][0].name}
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                `);
+            $('#matchMessage').addClass("hidden")
+
+        } else {
+            console.log("No results")
+        }
     }
-    let renderMatchGraphs = function (matchGraphs) {
-        var files = []
-        for (let i = 0; i < matchGraphs.length; i++) {
+    let renderGraphList = function (matchGraphs) {
+
+        let graphs = JSON.parse(matchGraphs);
+        for (let i = 0; i < graphs.length; i++) {
             $('.relaxed.divided.list').append(`
-                <div class="item">
-                    <i class="large file alternate outline middle aligned icon"></i>
+                <div class="item" id="${graphs[i]}">
+                    <i class="large file alternate outline icon"></i>
                     <div class="content">
-                        <a class="header">${matchGraphs[i]}</a>
+                        <a class="header">${graphs[i]}</a>
                     <!--<div class="description">Updated 10 mins ago</div>-->
                 </div>
             `);
         }
-
+        $(`.divided.list .item`).click(function () {
+            fetchMatchGraph($(this).attr("id"));
+        });
     }
     let match = function () {
         var male = $('.ui.male.checkbox').checkbox('is checked') ? "male" : false;
@@ -278,7 +301,6 @@ $(function () {
         //get match list
         $('.records.button .history.icon').removeClass("loading");
         $('.records.button').removeClass("disabled");
-        console.log(errMsg)
         fetchMatchGraphs();
     });
 

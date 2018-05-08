@@ -80,18 +80,20 @@ router.get('/genMatch/:settings', (req, res) => {
             });
         } else {
             console.log("Run generateMatchGraph");
-            res.status(102).send(match.generateMatchGraph(null, (data) => {
+            match.generateMatchGraph(null, (data) => {
                 res.status(200).send(JSON.stringify(data));
-            }));
+            });
         }
     } else {
         res.status(401).send("Unauthorized");
     }
 });
 router.get('/fetchGraphs', (req, res)=>{
+    console.log("fetchGraphs")
     if (req.session.admin) {
         match.fetchFiles((data)=>{
-            res.status(200).send(data);
+            console.log(data)
+            res.status(200).send(JSON.stringify(data));
         })
     } else {
         res.status(401).send("Unauthorized");
@@ -99,7 +101,8 @@ router.get('/fetchGraphs', (req, res)=>{
 });
 router.get('/fetchGraph/:file', (req, res)=>{
     if (req.session.admin) {
-        let filter = JSON.parse(req.params.file);
+        let file = req.params.file;
+        console.log("FILE " + file);
         match.fetchFile(file, (data)=>{
             res.status(200).send(data);
         })
